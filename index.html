@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Scholar's Conclave 2025 | NIT Raipur</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#112b52',
+                        secondary: '#f4a950',
+                        tertiary: '#e8e8e8',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .committee-member > p, .committee-member > h4 {
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="./images/nitrr_logo.png" alt="NIT Raipur Logo" class="h-12">
+                    <div class="ml-4">
+                        <h1 class="text-primary text-md md:text-xl font-bold">Research Scholar's Conclave 2025</h1>
+                        <p class="text-sm text-gray-600">National Institute of Technology Raipur</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="dropdown relative group">
+                        <a href="#committee" class="nav-link flex items-center">
+                            Committee <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="w-fit dropdown-menu">
+                            <a href="#organizing-committee">Organizing Committee</a>
+                            <a href="#advisory-committee">Advisory Committee</a>
+                        </div>
+                    </div>
+                    <a href="#speakers" class="nav-link">Speakers</a>
+                    <a href="#venue" class="nav-link">Venue</a>
+                    <a href="#footer" class="nav-link">Contact</a>
+                    <a href="https://youtube.com" target="_blank" class="btn-primary">
+                        <i class="fab fa-youtube mr-2"></i> Watch
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-primary" aria-label="Open mobile menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#committee" class="mobile-nav-link">Committee</a>
+                <a href="#speakers" class="mobile-nav-link">Speakers</a>
+                <a href="#venue" class="mobile-nav-link">Venue</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <a href="https://youtube.com" target="_blank" class="mobile-btn-primary">
+                    <i class="fab fa-youtube mr-2"></i> Watch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-[95%] flex items-center pt-24 pb-16 bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Research Scholar's Conclave 2025</h1>
+                    <h2 class="text-2xl md:text-2xl mb-4">December 12<sup>th</sup> - 13<sup>th</sup>, 2025</h2>
+                    <p class="text-lg mb-6">Organized by National Institute of Technology Raipur</p>
+                    <div class="flex space-x-4">
+                        <a href="#about" class="btn-secondary">About Event</a>
+                        <a href="#contact" class="btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="./images/campus/nitrr_campus.jpg" alt="NIT Raipur Campus" class="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 mx-auto max-w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Invitation</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 pr-0 lg:pr-8" data-aos="fade-right">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-secondary">
+                        <p class="text-gray-700 mb-4">
+                            We are delighted to invite you to the Research Scholar's Conclave 2025, to be held at the National Institute of Technology Raipur on December 12-13, 2025.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            The Research Scholar's Conclave provides a platform for research scholars to present their work, exchange ideas, and collaborate with peers and experts. It aims to foster a vibrant research ecosystem and promote interdisciplinary interactions.
+                        </p>
+                        <p class="text-gray-700">
+                            We look forward to your participation in making this conclave a great success.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Abstract Submission Deadline</h3>
+                                <p>October 15, 2025</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Notification of Acceptance</h3>
+                                <p>November 1, 2025</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Registration Deadline</h3>
+                                <p>November 15, 2025</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Conclave Dates</h3>
+                                <p>December 12-13, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section id="event" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">About the Event</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="flex flex-col-reverse lg:flex-row items-center">
+                <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Conference Event" class="rounded-lg shadow-lg mx-auto max-w-full">
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-12" data-aos="fade-left">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <p class="text-gray-700 mb-4">
+                            The Research Scholar's Conclave 2025 is a premier event organized by NIT Raipur to bring together research scholars, academicians, and industry professionals from across the country.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            The conclave will feature keynote speeches, paper presentations, poster sessions, panel discussions, and networking opportunities. It aims to provide a platform for showcasing cutting-edge research and fostering collaboration across disciplines.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Key areas of focus include:
+                        </p>
+                        <ul class="list-disc pl-5 mb-4 text-gray-700">
+                            <li>Artificial Intelligence and Machine Learning</li>
+                            <li>Renewable Energy and Sustainability</li>
+                            <li>Advanced Materials and Manufacturing</li>
+                            <li>Communications and Networking</li>
+                            <li>Biotechnology and Healthcare Innovations</li>
+                        </ul>
+                        <p class="text-gray-700">
+                            Join us for two days of knowledge sharing, innovation, and collaboration!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizing Committee Section -->
+    <section id="committee" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Organizing Committee</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="committee-container">
+                <!-- Chief Patron -->
+                <div class="committee-category" data-aos="fade-up">
+                    <h3 class="committee-category-title">Chief Patron</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/director.png" alt="Director">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">director@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="director@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span class="contact-info">+91 XXXXXXXXXX</span>
+                                            <button class="copy-btn" data-copy="+91 XXXXXXXXXX">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. N V Ramana Rao</h4>
+                            <p>Director, NIT Raipur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Patron -->
+                <div class="committee-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="committee-category-title">Chairperson</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/chairperson.jpg" alt="Chairperson">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">chairperson@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="chairperson@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                        <!-- No phone number for this member -->
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. P. Diwan</h4>
+                            <p>Dean (R&C), NIT Raipur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Convener -->
+                <!-- <div class="committee-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="committee-category-title">Convener</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="https://placehold.co/300x300  " alt="Convener">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">convener@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="convener@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span class="contact-info">+91 XXXXXXXXXX</span>
+                                            <button class="copy-btn" data-copy="+91 XXXXXXXXXX">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Prof. Name Surname</h4>
+                            <p>Department of Mechanical Engineering</p>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Co-Conveners -->
+                <div class="committee-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="committee-category-title">Organizing Secretary</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/org-secretary.jpeg" alt="Organizing Secretary">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <!-- Only phone number for this member -->
+                                        <div class="contact-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span class="contact-info">+91 XXXXXXXXXX</span>
+                                            <button class="copy-btn" data-copy="+91 XXXXXXXXXX">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. Anamika Yadav</h4>
+                            <p>Professor, NIT Raipur</p>
+                        </div>
+                        
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/manwendra.jpg" alt="Organizing Secretary">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">manvendra@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="manvendra@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. Manwendra K. Tripathi</h4>
+                            <p>Associate Professor, NIT Raipur</p>
+                        </div>
+
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/anandk.jpg" alt="Organizing Secretary">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">manvendra@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="manvendra@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. J. AnandKumar</h4>
+                            <p>Associate Professor, NIT Raipur</p>
+                        </div>
+
+
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/awnishk.jpg" alt="Organizing Secretary">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">awnishk@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="awnishk@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. Awanish Kumar</h4>
+                            <p>Associate Professor, NIT Raipur</p>
+                        </div>
+
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="./images/organizers/tirath.jpg" alt="Organizing Secretary">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">tirath@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="tirath@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. Tirath Prasad Sahu</h4>
+                            <p>Associate Professor, NIT Raipur</p>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                <!-- Organizing Secretaries -->
+                <!-- <div class="committee-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="committee-category-title">Organizing Secretaries</h3>
+                    <div class="flex flex-wrap justify-center">
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="https://placehold.co/300x300  " alt="Secretary 1">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">secretary1@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="secretary1@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span class="contact-info">+91 XXXXXXXXXX</span>
+                                            <button class="copy-btn" data-copy="+91 XXXXXXXXXX">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. Name Surname</h4>
+                            <p>Department of Mechanical Engineering</p>
+                        </div>
+                        
+                        <div class="committee-member">
+                            <div class="member-photo">
+                                <img src="https://placehold.co/300x300  " alt="Secretary 2">
+                                <div class="member-overlay">
+                                    <div class="member-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="contact-info">secretary2@nitrr.ac.in</span>
+                                            <button class="copy-btn" data-copy="secretary2@nitrr.ac.in">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Dr. Name Surname</h4>
+                            <p>Department of Civil Engineering</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous Conclaves Section -->
+    <section id="previous-conclaves" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Previous Conclaves</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="conclave-carousel" data-aos="fade-up">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Conclave 2024 -->
+                        <div class="carousel-slide">
+                            <div class="conclave-card">
+                                <img src="./images/conclaves/conclave_2024_1.png" alt="Conclave 2024" class="conclave-image">
+                                <div class="conclave-content">
+                                    <h3>Research Scholar's Conclave 2024</h3>
+                                    <p>Focused on sustainable technologies and AI integration in research.</p>
+                                    <a href="https://sites.google.com/view/researchscholarsconclave2022" class="conclave-link" target="_blank">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conclave 2023 -->
+                        <div class="carousel-slide">
+                            <div class="conclave-card">
+                                <img src="./images/conclaves/conclave_2024_2.png" alt="Conclave 2023" class="conclave-image">
+                                <div class="conclave-content">
+                                    <h3>Research Scholar's Conclave 2023</h3>
+                                    <p>Explored innovations in renewable energy and smart materials.</p>
+                                    <a href="https://sites.google.com/view/researchscholarsconclave2022" class="conclave-link" target="_blank">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conclave 2022 -->
+                        <div class="carousel-slide">
+                            <div class="conclave-card">
+                                <img src="./images//conclaves/conclave_2022.png" alt="Conclave 2022" class="conclave-image">
+                                <div class="conclave-content">
+                                    <h3>Research Scholar's Conclave 2022</h3>
+                                    <p>Featured breakthrough research in biotechnology and healthcare.</p>
+                                    <a href="https://misp2022.nitrr.ac.in/" class="conclave-link" target="_blank">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-button prev" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-button next" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="indicator" data-index="1" aria-label="Go to slide 2"></button>
+                    <button class="indicator" data-index="2" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Keynote Speakers</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Distinguished speakers from academia and industry will share their insights and research during the conclave.
+                </p>
+            </div>
+            
+            <div class="speakers-grid row justify-center wrap">
+                <div class="speaker-card col-3 col-sm-1" data-aos="fade-up">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/300x300  " alt="Speaker 1">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Prof. John Doe</h3>
+                        <p class="speaker-title">Machine Learning Expert</p>
+                        <p class="speaker-bio">Professor at Stanford University with expertise in artificial intelligence and machine learning.</p>
+                        <div class="speaker-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="speaker-card col-3 col-sm-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/300x300  " alt="Speaker 2">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Dr. Jane Smith</h3>
+                        <p class="speaker-title">Nanotechnology Researcher</p>
+                        <p class="speaker-bio">Leading researcher in nanotechnology with patents in material sciences and engineering.</p>
+                        <div class="speaker-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="speaker-card col-3 col-sm-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/300x300  " alt="Speaker 3">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Prof. Robert Johnson</h3>
+                        <p class="speaker-title">Sustainable Energy Expert</p>
+                        <p class="speaker-bio">Pioneering research in renewable energy sources and sustainable development.</p>
+                        <div class="speaker-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="speaker-card col-3 col-sm-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/300x300  " alt="Speaker 4">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Dr. Emily Chen</h3>
+                        <p class="speaker-title">Quantum Computing Specialist</p>
+                        <p class="speaker-bio">Researcher in quantum computing with contributions to quantum algorithms and applications.</p>
+                        <div class="speaker-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Venue</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0" data-aos="fade-right">
+                    <div class="venue-info bg-gray-50 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">National Institute of Technology Raipur</h3>
+                        <p class="mb-4 text-gray-700">
+                            Established in 1956, NIT Raipur is one of the premier technical institutes in India. Located in the capital city of Chhattisgarh, the institute offers a vibrant academic environment with excellent infrastructure and facilities.
+                        </p>
+                        <p class="mb-4 text-gray-700">
+                            The Research Scholar's Conclave 2025 will be held in the state-of-the-art Auditorium Complex, which provides an ideal setting for academic exchanges and collaborations.
+                        </p>
+                        <div class="venue-address mt-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Address:</h4>
+                            <p class="text-gray-700">
+                                National Institute of Technology Raipur<br>
+                                G.E. Road, Raipur<br>
+                                Chhattisgarh - 492010, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="campus-gallery">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="./images/campus//nitrr_campus.png" alt="NIT Raipur Campus" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./images/campus//nitrr_main_building.png" alt="NIT Raipur Building" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./images/campus/nitrr_ccc.png" alt="Computer Center" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./images/campus/nitrr_library.png" alt="Library" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container mt-12" data-aos="zoom-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.531177335056!2d81.60484261493169!3d21.24959998585958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology%2C%20Raipur!5e0!3m2!1sen!2sin!4v1616654532674!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white pt-16 pb-8"  id="footer">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1: Site  -->
+                <div>
+                    <h1 class="text-2xl md:text-2xl font-bold mb-4 text-center">Research Conclave 2025</h1>
+                    <div class="mb-4 flex justify-center items-center">
+                        <img src="./images/nitrr_logo.png" alt="NIT Raipur Logo" class="h-40 mx-auto">
+                    </div>
+                </div>
+                
+                <!-- Column 2: Important Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#committee">Committee</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#venue">Venue</a></li>
+                        <li><a href="#" class="text-secondary">Register Now</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Related Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Related Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.nitrr.ac.in/" target="_blank">NIT Raipur</a></li>
+                        <li><a href="https://www.education.gov.in/" target="_blank">Ministry of Education</a></li>
+                        <li><a href="#previous-conclaves">Previous Conclaves</a></li>
+                        <li><a href="#">Accommodation</a></li>
+                        <li><a href="#">Travel Information</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact Us -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                        <p>National Institute of Technology Raipur<br>G.E. Road, Raipur<br>Chhattisgarh - 492010, India</p>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-phone mr-3"></i>
+                        <p>+91 XXXXXXXXXX</p>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <p>conclave2025@nitrr.ac.in</p>
+                    </div>
+                    <div class="social-icons flex mt-4">
+                        <a href="#" class="mr-4" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="mr-4" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="mr-4" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="mr-4" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- <div>
+                    <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+                    <p class="mb-4">Subscribe to our newsletter for updates about the conclave.</p>
+                    <form class="newsletter-form">
+                        <div class="flex flex-col">
+                            <input type="email" placeholder="Your Email Address" class="p-3 mb-2 rounded text-gray-800">
+                            <button type="submit" class="bg-secondary text-white py-3 px-4 rounded hover:bg-secondary/80 transition duration-300">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div> -->
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 mt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div>
+                        <p>&copy; 2025 Research Scholar's Conclave, NIT Raipur. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out',
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Carousel functionality
+        $(document).ready(function() {
+            let currentIndex = 0;
+            const slides = $('.carousel-slide');
+            const totalSlides = slides.length;
+            const indicators = $('.indicator');
+            
+            // Set initial position
+            updateCarousel();
+            
+            // Next button
+            $('.carousel-button.next').click(function() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Previous button
+            $('.carousel-button.prev').click(function() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Indicator buttons
+            indicators.each(function(index) {
+                $(this).click(function() {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+            
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                $('.carousel-track').css('transform', `translateX(${offset}%)`);
+                
+                // Update indicators
+                indicators.removeClass('active');
+                indicators.eq(currentIndex).addClass('active');
+            }
+            
+            // Auto-slide
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }, 5000);
+            
+            // Copy email functionality
+            $('.copy-btn').click(function(e) {
+                e.stopPropagation();
+                const textToCopy = $(this).data('copy');
+                navigator.clipboard.writeText(textToCopy).then(function() {
+                    alert('Email copied to clipboard!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
