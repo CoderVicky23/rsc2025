@@ -1402,12 +1402,14 @@ footer h3::after {
 .glimpse-slide {
     flex: 0 0 20%;
     padding: 0 15px;
-    transition: all 0.5s ease;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     opacity: 0.5;
     transform: scale(0.8);
     filter: blur(1px);
     position: relative;
     z-index: 1;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .glimpse-slide.active {
@@ -1424,13 +1426,16 @@ footer h3::after {
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 3px solid transparent;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .glimpse-slide.active .glimpse-image {
     box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
     border: 3px solid var(--secondary-color);
+    transform: translateZ(20px);
 }
 
 .glimpse-button {
@@ -1508,12 +1513,14 @@ footer h3::after {
 .news-clip-slide {
     flex: 0 0 20%;
     padding: 0 15px;
-    transition: all 0.5s ease;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     opacity: 0.5;
     transform: scale(0.8);
     filter: blur(1px);
     position: relative;
     z-index: 1;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .news-clip-slide.active {
@@ -1530,13 +1537,16 @@ footer h3::after {
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 3px solid transparent;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .news-clip-slide.active .news-clip-image {
     box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
     border: 3px solid var(--secondary-color);
+    transform: translateZ(20px);
 }
 
 .news-clips-button {
@@ -1595,61 +1605,183 @@ footer h3::after {
     box-shadow: 0 0 0 2px rgba(244, 169, 80, 0.3);
 }
 
+/* Campus Carousel Styles */
+.campus-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.campus-carousel-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.campus-slide {
+    flex: 0 0 20%;
+    padding: 0 15px;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0.5;
+    transform: scale(0.8);
+    filter: blur(1px);
+    position: relative;
+    z-index: 1;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.campus-slide.active {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: blur(0);
+    z-index: 2;
+}
+
+.campus-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 3px solid transparent;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.campus-slide.active .campus-image {
+    box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
+    border: 3px solid var(--secondary-color);
+    transform: translateZ(20px);
+}
+
+.campus-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.campus-button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.campus-button.prev {
+    left: 20px;
+}
+
+.campus-button.next {
+    right: 20px;
+}
+
+.campus-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.campus-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.campus-indicator.active {
+    background: var(--secondary-color);
+    transform: scale(1.4);
+    box-shadow: 0 0 0 2px rgba(244, 169, 80, 0.3);
+}
+
 /* Responsive styles for carousels */
 @media (max-width: 1200px) {
-    .glimpse-slide, .news-clip-slide {
+    .glimpse-slide, .news-clip-slide, .campus-slide {
         flex: 0 0 25%;
     }
 }
 
 @media (max-width: 1024px) {
-    .glimpse-slide, .news-clip-slide {
+    .glimpse-slide, .news-clip-slide, .campus-slide {
         flex: 0 0 33.333%;
     }
     
-    .glimpse-slide.active, .news-clip-slide.active {
+    .glimpse-slide.active, .news-clip-slide.active, .campus-slide.active {
         transform: scale(1.1);
     }
 }
 
 @media (max-width: 768px) {
-    .glimpse-slide, .news-clip-slide {
+    .glimpse-slide, .news-clip-slide, .campus-slide {
         flex: 0 0 50%;
     }
     
-    .glimpse-carousel, .news-clips-carousel {
+    .glimpse-carousel, .news-clips-carousel, .campus-carousel {
         padding: 40px 0;
     }
     
-    .glimpse-button, .news-clips-button {
+    .glimpse-button, .news-clips-button, .campus-button {
         width: 36px;
         height: 36px;
     }
     
-    .glimpse-button.prev, .news-clips-button.prev {
+    .glimpse-button.prev, .news-clips-button.prev, .campus-button.prev {
         left: 10px;
     }
     
-    .glimpse-button.next, .news-clips-button.next {
+    .glimpse-button.next, .news-clips-button.next, .campus-button.next {
         right: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .glimpse-slide, .news-clip-slide {
+    .glimpse-slide, .news-clip-slide, .campus-slide {
         flex: 0 0 80%;
     }
     
-    .glimpse-slide.active, .news-clip-slide.active {
+    .glimpse-slide.active, .news-clip-slide.active, .campus-slide.active {
         transform: scale(1.05);
     }
     
-    .glimpse-button, .news-clips-button {
+    .glimpse-button, .news-clips-button, .campus-button {
         width: 32px;
         height: 32px;
     }
     
-    .glimpse-indicators, .news-clips-indicators {
+    .glimpse-indicators, .news-clips-indicators, .campus-indicators {
         margin-top: 20px;
     }
+}
+
+.venue-info {
+    margin-bottom: 30px;
+    background-color: rgba(247, 250, 252, 0.8);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
 }
