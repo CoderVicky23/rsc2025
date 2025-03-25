@@ -1382,3 +1382,274 @@ footer h3::after {
         padding-left: 1.25rem;
     }
 }
+
+/* Glimpse Carousel Styles */
+.glimpse-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.glimpse-carousel-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.glimpse-slide {
+    flex: 0 0 20%;
+    padding: 0 15px;
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.8);
+    filter: blur(1px);
+    position: relative;
+    z-index: 1;
+}
+
+.glimpse-slide.active {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: blur(0);
+    z-index: 2;
+}
+
+.glimpse-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    border: 3px solid transparent;
+}
+
+.glimpse-slide.active .glimpse-image {
+    box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
+    border: 3px solid var(--secondary-color);
+}
+
+.glimpse-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.glimpse-button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.glimpse-button.prev {
+    left: 20px;
+}
+
+.glimpse-button.next {
+    right: 20px;
+}
+
+.glimpse-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.glimpse-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glimpse-indicator.active {
+    background: var(--secondary-color);
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px rgba(244, 169, 80, 0.3);
+}
+
+/* Newspaper Clips Styles */
+.news-clips-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.news-clips-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.news-clip-slide {
+    flex: 0 0 20%;
+    padding: 0 15px;
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.8);
+    filter: blur(1px);
+    position: relative;
+    z-index: 1;
+}
+
+.news-clip-slide.active {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: blur(0);
+    z-index: 2;
+}
+
+.news-clip-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    border: 3px solid transparent;
+}
+
+.news-clip-slide.active .news-clip-image {
+    box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
+    border: 3px solid var(--secondary-color);
+}
+
+.news-clips-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.news-clips-button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.news-clips-button.prev {
+    left: 20px;
+}
+
+.news-clips-button.next {
+    right: 20px;
+}
+
+.news-clips-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.news-clips-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.news-clips-indicator.active {
+    background: var(--secondary-color);
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px rgba(244, 169, 80, 0.3);
+}
+
+/* Responsive styles for carousels */
+@media (max-width: 1200px) {
+    .glimpse-slide, .news-clip-slide {
+        flex: 0 0 25%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .glimpse-slide, .news-clip-slide {
+        flex: 0 0 33.333%;
+    }
+    
+    .glimpse-slide.active, .news-clip-slide.active {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .glimpse-slide, .news-clip-slide {
+        flex: 0 0 50%;
+    }
+    
+    .glimpse-carousel, .news-clips-carousel {
+        padding: 40px 0;
+    }
+    
+    .glimpse-button, .news-clips-button {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .glimpse-button.prev, .news-clips-button.prev {
+        left: 10px;
+    }
+    
+    .glimpse-button.next, .news-clips-button.next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glimpse-slide, .news-clip-slide {
+        flex: 0 0 80%;
+    }
+    
+    .glimpse-slide.active, .news-clip-slide.active {
+        transform: scale(1.05);
+    }
+    
+    .glimpse-button, .news-clips-button {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .glimpse-indicators, .news-clips-indicators {
+        margin-top: 20px;
+    }
+}
