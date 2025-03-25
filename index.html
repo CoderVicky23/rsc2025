@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="./images/nitrr_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Research Scholar's Conclave 2025 | NIT Raipur">
     <title>Research Scholar's Conclave 2025 | NIT Raipur</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
 
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -41,11 +42,41 @@
     </script>
 
     <style>
-        .committee-member > p, .committee-member > h4 {
-            padding: 0 10px;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Back to top button style */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #112B52;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background-color: #4CAF50;
+            transform: scale(1.1);
         }
     </style>
 </head>
+
 <body class="font-sans">
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-md fixed w-full z-50">
@@ -53,15 +84,17 @@
             <div class="flex justify-between items-center z-10">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="./images/nitrr_logo.png" alt="NIT Raipur Logo" class="h-12">
+                    <img src="./images/nitrr_logo.png" alt="NIT Raipur Logo" class="h-12 md:h-16">
                     <div class="ml-4">
-                        <h1 class="text-primary text-sm md:text-xl font-bold">Research Scholar's Conclave 2025</h1>
-                        <p class="text-sm text-gray-600">National Institute of Technology Raipur</p>
+                        <h1 class="text-primary text-sm md:text-xl lg:text-2xl font-bold">Research Scholar's Conclave
+                            2025</h1>
+                        <p class="text-sm md:text-base lg:text-lg text-gray-600">National Institute of Technology Raipur
+                        </p>
                     </div>
                 </div>
-                
+
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8 text-sm md:text-base lg:text-lg">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#tracks" class="nav-link">Tracks</a>
@@ -77,11 +110,12 @@
                     <a href="#speakers" class="nav-link">Speakers</a>
                     <a href="#venue" class="nav-link">Venue</a>
                     <a href="#footer" class="nav-link">Contact</a>
-                    <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank" class="btn-primary">
+                    <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank"
+                        class="btn-primary">
                         <i class="fab fa-youtube mr-2"></i> Watch
                     </a>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-primary" aria-label="Open mobile menu">
@@ -89,7 +123,7 @@
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <a href="#home" class="mobile-nav-link">Home</a>
@@ -99,7 +133,8 @@
                 <a href="#speakers" class="mobile-nav-link">Speakers</a>
                 <a href="#venue" class="mobile-nav-link">Venue</a>
                 <a href="#contact" class="mobile-nav-link">Contact</a>
-                <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank" class="mobile-btn-primary">
+                <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank"
+                    class="mobile-btn-primary">
                     <i class="fab fa-youtube mr-2"></i> Watch
                 </a>
             </div>
@@ -107,22 +142,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-32 lg:pt-24 pb-12 bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white relative overflow-hidden">
+    <section id="home"
+        class="min-h-screen flex items-center pt-32 lg:pt-24 pb-12 bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white relative overflow-hidden">
         <!-- Background Design Elements -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
         <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full -ml-40 -mb-40"></div>
-        
+
         <div class="container mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Content Column -->
                 <div class="order-2 lg:order-1 mt-6 md:mt-0" data-aos="fade-right">
                     <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-lg border border-white/20 shadow-xl">
-                        <span class="inline-block px-4 py-1 bg-secondary/90 text-white rounded-full text-sm font-medium mb-4">December 19-20, 2025</span>
-                        <h1 class="text-3xl md:text-5xl font-bold mb-3 leading-tight">Research Scholar's Conclave 2025</h1>
+                        <span
+                            class="inline-block px-4 py-1 bg-secondary/90 text-white rounded-full text-sm font-medium mb-4">December
+                            19-20, 2025</span>
+                        <h1 class="text-3xl md:text-5xl font-bold mb-3 leading-tight">Research Scholar's Conclave 2025
+                        </h1>
                         <div class="w-20 h-1 bg-secondary mb-6"></div>
                         <p class="text-lg mb-3">Organized by National Institute of Technology Raipur</p>
                         <div class="mb-6 mt-4 inline-block px-4 py-2 bg-primary/80 rounded-lg border border-white/10">
-                            <p class="text-xl font-semibold flex items-center">
+                            <p class="text-lg md:text-xl lg:text-2xl font-semibold flex items-center">
                                 <i class="fas fa-lightbulb mr-2 text-secondary"></i>
                                 Theme: Sustainable Technology
                             </p>
@@ -136,7 +175,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Quick Stats -->
                     <div class="grid grid-cols-3 gap-4 mt-6">
                         <div class="bg-white/10 p-4 rounded-lg text-center backdrop-blur-sm">
@@ -153,12 +192,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Image Column -->
                 <div class="order-1 lg:order-2 flex justify-center mt-4 md:mt-0" data-aos="fade-left">
                     <div class="relative">
-                        <img src="./images/campus/nitrr_main_building2.png" alt="NIT Raipur Campus" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-white/30 z-10 relative">
-                        <div class="absolute -bottom-4 -right-4 w-full h-full bg-secondary/20 rounded-lg"></div>
+                        <img src="./images/campus/nitrr_main_building_3.png" alt="NIT Raipur Campus"
+                            class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-white/30 z-10 relative h-full">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full bg-gray-50/20 rounded-lg"></div>
                     </div>
                 </div>
             </div>
@@ -172,61 +212,67 @@
                 <h2 class="section-title" data-aos="fade-up">Invitation</h2>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-8 lg:mb-0 pr-0 lg:pr-8" data-aos="fade-right">
                     <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-secondary">
-                        <p class="text-gray-700 mb-4">
-                            We are delighted to invite you to the Research Scholar's Conclave 2025, to be held at the National Institute of Technology Raipur on December 19-20, 2025.
+                        <!-- <p class="text-gray-700 mb-4">
+                            We are delighted to invite you to the Research Scholar's Conclave 2025, to be held at the
+                            National Institute of Technology Raipur on December 19-20, 2025.
                         </p>
                         <p class="text-gray-700 mb-4">
-                            This year's conclave focuses on the theme "Sustainable Technology," integrating diverse domains from Engineering, Basic Sciences, and Humanities. For the first time, the conclave is open to research scholars from other reputed institutes, fostering healthy competition and collaborative research opportunities.
+                            This year's conclave focuses on the theme "Sustainable Technology," integrating diverse
+                            domains from Engineering, Basic Sciences, and Humanities. For the first time, the conclave
+                            is open to research scholars from other reputed institutes, fostering healthy competition
+                            and collaborative research opportunities.
                         </p>
                         <p class="text-gray-700">
-                            We look forward to your participation in making this conclave a great success. The conclave will feature Scopus-indexed proceedings, ensuring global visibility for your research.
+                            We look forward to your participation in making this conclave a great success. The conclave
+                            will feature Scopus-indexed proceedings, ensuring global visibility for your research.
+                        </p> -->
+
+                        <p class="mb-4">
+                            The Research Scholar's Conclave 2025 is set to take place at the National Institute of
+                            Technology Raipur on December 19-20, 2025, bringing together researchers, academicians, and
+                            experts from diverse fields. This year, the conclave is centered around the theme
+                            "Sustainable Technology," focusing on innovative research in Engineering, Basic Sciences,
+                            and Humanities. It aims to foster discussions on cutting-edge advancements that promote
+                            sustainability across multiple domains.
+                        </p>
+
+                        <p class="mb-4">
+                            For the first time, the conclave is open to research scholars from reputed institutes across
+                            the country, encouraging healthy academic competition and collaboration. This expansion
+                            provides an excellent opportunity for scholars to present their research, engage in
+                            insightful discussions, and build meaningful professional networks. The event will feature
+                            technical sessions, panel discussions, and keynote addresses by distinguished experts,
+                            offering valuable exposure to emerging trends and developments.
+                        </p>
+
+                        <p class="mb-4">
+                            A key highlight of the conclave is the Scopus-indexed proceedings, ensuring that the
+                            presented research gains global visibility and recognition. Participants will have the
+                            opportunity to contribute to high-impact discussions, receive constructive feedback, and
+                            explore potential collaborations that can drive their research forward.
+                        </p>
+
+                        <p>
+                            With a focus on sustainability-driven innovations and interdisciplinary knowledge exchange,
+                            the Research Scholar’s Conclave 2025 promises to be an enriching experience for all
+                            attendees. We look forward to an engaging and successful event, bringing together some of
+                            the brightest minds working toward a sustainable future.
                         </p>
                     </div>
                 </div>
-                
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>Paper Submission Starts</h3>
-                                <p>June 2, 2025</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>Deadline for Full Paper Submission</h3>
-                                <p>September 15, 2025</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>Acceptance Notification</h3>
-                                <p>October 30, 2025</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>Camera Ready Submission</h3>
-                                <p>November 15, 2025</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>Conclave Dates</h3>
-                                <p>December 19-20, 2025</p>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-right">
+                    <div class="relative">
+                        <img src="./images/event/invitation.png" alt="Conference Event"
+                            class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-gray-200/30 z-10 relative mx-auto w-[60%]">
+                        <!-- <div class="absolute -bottom-4 mx-auto w-[60%] h-full bg-gray-500/20 rounded-lg"></div> -->
+                    </div>  
                 </div>
+
             </div>
         </div>
     </section>
@@ -238,28 +284,40 @@
                 <h2 class="section-title" data-aos="fade-up">About the Event</h2>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="flex flex-col-reverse lg:flex-row items-center">
                 <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-right">
                     <div class="relative">
-                        <img src="./images/event/sustainable_technology.png" alt="Conference Event" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-gray-200/30 z-10 relative mx-auto max-w-full">
-                        <div class="absolute -bottom-4 -right-4 w-full h-full bg-primary/20 rounded-lg"></div>
+                        <img src="./images/event/sustainable_technology.png" alt="Conference Event"
+                            class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-gray-200/30 z-10 relative mx-auto max-w-full">
+                        <div class="absolute -bottom-4 -left-4 w-full h-full bg-gray-50/20 rounded-lg"></div>
                     </div>
                 </div>
-                
+
                 <div class="lg:w-1/2 lg:pl-12" data-aos="fade-left">
                     <div class="bg-gray-50 p-6 rounded-lg shadow-md">
                         <p class="text-black mb-4">
-                            The Office of Dean (R&C), NIT Raipur, is organizing a three-day Research Scholars' Conclave from 19-20th Dec 2025 at the NIT Raipur campus in offline mode. Under the leadership of the Dean (R&C), this year's conclave is set to witness a qualitative enhancement with the introduction of Scopus-indexed proceedings, ensuring global visibility and recognition for the presented research.
+                            The Office of Dean (R&C), NIT Raipur, is organizing a three-day Research Scholars' Conclave
+                            from 19-20th Dec 2025 at the NIT Raipur campus in offline mode. Under the leadership of the
+                            Dean (R&C), this year's conclave is set to witness a qualitative enhancement with the
+                            introduction of Scopus-indexed proceedings, ensuring global visibility and recognition for
+                            the presented research.
                         </p>
                         <p class="text-black mb-4">
-                            For the first time, the conclave is open to research scholars from other reputed institutes, fostering healthy competition and collaborative research opportunities. The event serves as a multidisciplinary platform for scholars to showcase their research, exchange innovative ideas, and contribute to cutting-edge advancements in sustainable and transformative technologies.
+                            For the first time, the conclave is open to research scholars from other reputed institutes,
+                            fostering healthy competition and collaborative research opportunities. The event serves as
+                            a multidisciplinary platform for scholars to showcase their research, exchange innovative
+                            ideas, and contribute to cutting-edge advancements in sustainable and transformative
+                            technologies.
                         </p>
                         <p class="text-black mb-4">
-                            Parallel sessions will be conducted across different research domains, with expert evaluations, and the best presentations will be recognized and awarded. The conclave will act as a catalyst for impactful research and academic excellence, driving the institution towards a future rooted in sustainability and innovation.
+                            Parallel sessions will be conducted across different research domains, with expert
+                            evaluations, and the best presentations will be recognized and awarded. The conclave will
+                            act as a catalyst for impactful research and academic excellence, driving the institution
+                            towards a future rooted in sustainability and innovation.
                         </p>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </section>
@@ -271,234 +329,398 @@
                 <h2 class="section-title" data-aos="fade-up">Research Tracks</h2>
                 <div class="section-divider"></div>
                 <p class="text-gray-600 max-w-3xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="100">
-                    The conclave features 10 diverse tracks integrating multiple disciplines under the theme of "Sustainable Technology".
+                    The conclave features 10 diverse tracks integrating multiple disciplines under the theme of
+                    "Sustainable Technology".
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Track 1 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">1</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Sustainable Energy and Smart Power Systems</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Electrical, Mechanical, Basic Sciences</p>
+                <div class="track-card" data-aos="fade-up">
+                    <div class="track-number">1</div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Sustainable solutions for Resource, Energy and
+                        Infrastructure Management</h3>
+                    <p class="text-gray-600 mb-4">Research on innovative approaches to manage resources, energy, and
+                        infrastructure sustainably.</p>
+
+                    <div class="subtracks-list">
+                        <h4 class="text-base font-semibold text-gray-700 mb-2">Subtracks:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-5">
+                            <li>Renewable Energy Resources and Sustainable Technologies</li>
+                            <li>Earthquake Resistant Structures and Design</li>
+                            <li>Energy Storage Solutions and Management</li>
+                            <li>Sustainable Urban Planning and Architecture Design</li>
+                            <li>Sustainable Electric Power Systems</li>
+                            <li>Geographic Information System in Resource, Energy and Infrastructure Management</li>
+                            <li>Electric and Hybrid Vehicle Technologies</li>
+                            <li>Zero Carbon</li>
+                            <li>Bio-inspired Energy Solutions</li>
+                            <li>Climate change Monitoring, Mitigation and Adaptation</li>
+                            <li>Structural Health Monitoring and Management</li>
+                            <li>Disaster Modeling, Mitigation and Adaptation</li>
+                            <li>Energy Efficient Infrastructure and Management</li>
+                            <li>Sustainable Mining and Resource Recovery</li>
+                            <li>Recycling and Waste Management Systems</li>
+                            <li>Life Cycle Analysis of Infrastructure Projects</li>
+                            <li>Sustainable Transportation System, design and development</li>
+                            <li>Advanced Geological investigations for resource management</li>
+                            <li>Geotechnical Innovations for Sustainable Construction</li>
+                            <li>Green Infrastructures Solution</li>
+                            <li>Water Resource Management</li>
+                            <li>Environmental Monitoring, Management and Impact Assessments</li>
+                            <li>Infrastructure Project Management</li>
+                            <li>Public Policy and Regulations on Sustainable Development</li>
+                        </ul>
+                    </div>
                 </div>
-                
+
                 <!-- Track 2 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="50">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">2</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Eco-Friendly Materials and Smart Infrastructure</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Civil, Architecture, MME, Mechanical, Chemical, Basic Sciences</p>
+                <div class="track-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="track-number">2</div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Advanced Sustainable Materials, Product
+                        Development, and Environmental Solutions</h3>
+                    <p class="text-gray-600 mb-4">Research on developing and implementing sustainable materials and
+                        products to address environmental challenges.</p>
+
+                    <div class="subtracks-list">
+                        <h4 class="text-base font-semibold text-gray-700 mb-2">Subtracks:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-5">
+                            <li>Nanomaterials for Environmental Applications</li>
+                            <li>Electronic and Optical Materials</li>
+                            <li>Biocompatible and degradable Materials Development</li>
+                            <li>Mechanical design and product development</li>
+                            <li>Advanced Ceramics/Metal/Polymer Composites for Structural Applications</li>
+                            <li>Urban Design, Sustainability, and Architecture</li>
+                            <li>Polymer Science and Engineering</li>
+                            <li>Sustainable Materials and Technologies</li>
+                            <li>Green Chemistry and Sustainable Chemical Processes</li>
+                            <li>Soil and Water Remediation Technologies</li>
+                            <li>Corrosion Science and Surface Engineering</li>
+                            <li>Air Quality Monitoring and Management</li>
+                            <li>Photocatalytic Materials for Pollution Treatment</li>
+                            <li>Carbon Capture and Sequestration Technologies</li>
+                            <li>Materials for Energy Conversion and Storage</li>
+                            <li>Sustainable Materials in Civil Engineering</li>
+                            <li>Solid mechanics and structural analysis</li>
+                            <li>Hazardous Waste Management</li>
+                            <li>Sustainable Building structure and applications</li>
+                            <li>Supply Chain Management, Operations Research, and Systems Engineering</li>
+                            <li>Smart Coatings for Energy Efficiency</li>
+                            <li>Traditional/Non-Traditional Manufacturing Processes</li>
+                            <li>High-performance Metals and Alloys</li>
+                            <li>Lifecycle Assessment and Environmental Impact Studies</li>
+                            <li>Design of systems</li>
+                            <li>3D Printing</li>
+                            <li>Energy Utilization & Conservation of Energy</li>
+                            <li>Tribology and Mechatronics</li>
+                            <li>Thermal Performance of Construction Materials</li>
+                        </ul>
+                    </div>
                 </div>
-                
+
                 <!-- Track 3 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">3</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Sustainable Mobility and Intelligent Transport Systems</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Mechanical, Electrical, ECE, Civil</p>
+                <div class="track-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="track-number">3</div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Computational Intelligence and Smart
+                        Technologies for Sustainable Development</h3>
+                    <p class="text-gray-600 mb-4">Research on leveraging computational intelligence and smart
+                        technologies to drive sustainable development initiatives.</p>
+
+                    <div class="subtracks-list">
+                        <h4 class="text-base font-semibold text-gray-700 mb-2">Subtracks:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-5">
+                            <li>Theoretical computer science</li>
+                            <li>Smart Grid and Energy Management Systems</li>
+                            <li>Artificial Intelligence and its applications</li>
+                            <li>Wearable Technology and Personal Health Monitoring</li>
+                            <li>IoT for Smart applications</li>
+                            <li>Smart Manufacturing and Industry 4.0 & above</li>
+                            <li>Big Data Analytics and Management</li>
+                            <li>Augmented and Virtual Reality Applications</li>
+                            <li>Robotics and Automation Systems</li>
+                            <li>5G & beyond, wireless networks</li>
+                            <li>Intelligent Transportation Systems</li>
+                            <li>Cloud Computing and Services</li>
+                            <li>Computer Vision and Signal Processing</li>
+                            <li>Software Engineering</li>
+                            <li>Nonlinear system, modelling and simulation</li>
+                            <li>Computational Modeling for Energy Systems</li>
+                            <li>Cybersecurity and Data Protection</li>
+                            <li>Data Mining and Knowledge Discovery</li>
+                            <li>Blockchain Technologies</li>
+                            <li>Human-Computer Interaction</li>
+                            <li>Optimization techniques</li>
+                            <li>Quantum Computing</li>
+                            <li>Natural Language Processing and Text Analytics</li>
+                            <li>Embedded Systems and Microcontrollers</li>
+                            <li>Computational Biology</li>
+                            <li>Control Systems</li>
+                            <li>Smart Buildings and Infrastructure</li>
+                            <li>Smart Grid Technology Development</li>
+                            <li>Semiconductor technologies and its applications in VLSI</li>
+                        </ul>
+                    </div>
                 </div>
-                
+
                 <!-- Track 4 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="150">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">4</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Sustainable Mining and Resource Management</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Mining, Civil, Mechanical, Chemical, Basic Sciences</p>
+                <div class="track-card" data-aos="fade-up">
+                    <div class="track-number">4</div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Life Sciences and Health Sustainability</h3>
+                    <p class="text-gray-600 mb-4">Research on advancing life sciences to promote sustainable healthcare
+                        solutions and improve human wellbeing.</p>
+
+                    <div class="subtracks-list">
+                        <h4 class="text-base font-semibold text-gray-700 mb-2">Subtracks:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-5">
+                            <li>Genomic Data Analysis and Personalized Medicine</li>
+                            <li>Epidemiology and Public Health Interventions</li>
+                            <li>Biomedical Imaging Technologies</li>
+                            <li>Bioremediation and Environmental Clean-up Technologies</li>
+                            <li>Drug Discovery and Computational Biology</li>
+                            <li>Vaccine Development and Immunotherapy</li>
+                            <li>Tissue Engineering and Regenerative Medicine</li>
+                            <li>Microbial and Enzyme Technology</li>
+                            <li>Biomechanics and Human Movement Analysis</li>
+                            <li>Antimicrobial Resistance and New Therapeutics</li>
+                            <li>Environmental Health and Disease Ecology</li>
+                            <li>Mental Health Technologies and Interventions</li>
+                            <li>Bioinformatics and Computational Genomics</li>
+                            <li>Health Policy and Systems Research</li>
+                            <li>Synthetic Biology and Bioengineering</li>
+                            <li>Precision Agriculture for Healthier Food Systems</li>
+                            <li>Nutritional Science and Dietetics</li>
+                            <li>Health Impact of Climate Change</li>
+                            <li>Health Informatics and Medical Data Analytics</li>
+                            <li>Medical Robotics and Automation</li>
+                            <li>Biomaterials for Implantable Devices</li>
+                            <li>Sustainable Healthcare Facilities and Operations</li>
+                            <li>Neuro engineering and Brain-Computer Interfaces</li>
+                            <li>Biostatistics and Health Data Science</li>
+                            <li>Enzyme technology and Nano based biosensor development</li>
+                            <li>Mathematical methods in applied sciences</li>
+                        </ul>
+                    </div>
                 </div>
-                
+
                 <!-- Track 5 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">5</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Climate Science and Environmental Sustainability</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Basic Sciences, Humanities, Civil, Mechanical, Chemical</p>
-                </div>
-                
-                <!-- Track 6 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="250">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">6</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Water Conservation and Waste Management</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Civil, Mechanical, Environmental, Chemical, Biotechnology, Basic Sciences</p>
-                </div>
-                
-                <!-- Track 7 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">7</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Application of AI and Data-Driven Techniques for Sustainable Development</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Computer Science, Electrical, ECE, Humanities, all branches</p>
-                </div>
-                
-                <!-- Track 8 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="350">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">8</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Biomedical Innovations for Sustainable Healthcare</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Biomedical, Biotechnology, Computer Science, ECE, Chemical, Environmental, Mechanical</p>
-                </div>
-                
-                <!-- Track 9 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="400">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">9</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Agri-Tech and Sustainable Food Systems</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Biotechnology, Computer Science, Mechanical, ECE, Civil, Chemical, Basic Sciences</p>
-                </div>
-                
-                <!-- Track 10 -->
-                <div class="track-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="450">
-                    <div class="track-number bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">10</div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Sociocultural, Linguistic, Literary and Ethical Dimensions of Sustainability</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold">Departments:</span> Humanities, Basic Sciences</p>
+                <div class="track-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="track-number">5</div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Sociocultural, Linguistic, Literary and Ethical
+                        Dimensions of Sustainability</h3>
+                    <p class="text-gray-600 mb-4">Research on the intersection of sociocultural factors, linguistics,
+                        literature, and ethics in the context of sustainability.</p>
+
+                    <div class="subtracks-list">
+                        <h4 class="text-base font-semibold text-gray-700 mb-2">Subtracks:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1 pl-5">
+                            <li>Ethics of Artificial Intelligence and Technology</li>
+                            <li>Philosophical Approaches to Ecological Challenges</li>
+                            <li>Sustainable Business Practices and Corporate Social Responsibility</li>
+                            <li>Behavioral Economics of Environmental Decisions</li>
+                            <li>Social Impact of Renewable Energy Adoption</li>
+                            <li>Media Influence on Environmental Policy</li>
+                            <li>Cultural Perspectives on Environmental Conservation</li>
+                            <li>Public Health Ethics and Policies for Sustainable Developement</li>
+                            <li>Ethics in Biomedical and Biotechnology Research</li>
+                            <li>Indigenous Knowledge Systems and Sustainability</li>
+                            <li>Sustainable Urban Planning and Community Engagement</li>
+                            <li>Social Entrepreneurship and Innovation for Sustainable Development</li>
+                            <li>Education for Promoting Sustainable Development</li>
+                            <li>Impact of Climate Change on Vulnerable Populations</li>
+                            <li>Economic Policies for Sustainable Development</li>
+                            <li>Ethics of Data Privacy and Security</li>
+                            <li>Legal Frameworks Governing Environmental Protection</li>
+                            <li>Consumer Behavior and Sustainability</li>
+                            <li>Decision Making and Behavioural Practices: Role of Emotion, Cognition and Behaviour for
+                                Sustainable Development</li>
+                            <li>Neurocognitive Perspectives and Models for Achieving Sustainable Developmental Goals
+                            </li>
+                            <li>Gender Issues in Science and Technology</li>
+                            <li>Role of Media, Film, Art and Architecture in Sustainable Development</li>
+                            <li>Human Rights and AI Technology Development</li>
+                            <li>Ethical Dilemmas in Resource Allocation</li>
+                            <li>Ethical Considerations in Genetic Engineering</li>
+                            <li>Philosophical and Ethical Dimensions of Climate Engineering</li>
+                            <li>Sustainable Management of Resources</li>
+                            <li>Sociocultural and linguistic Sustainability</li>
+                            <li>Social Change and Mobility for Sustainable Development</li>
+                            <li>Values, Belief and Faith: Fundamental Dimensions of Sustainable Development</li>
+                            <li>Literary Health Humanities and Sustainable Development</li>
+                            <li>Ecocriticism and Ecofeminism for Sustainable Development</li>
+                            <li>Social Justice and Access to Technologies</li>
+                            <li>Gender Equitable and Sustainable Development and the Role of NGOs</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Organizing Committee Section -->
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Important Dates</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item reveal-left delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">02<sup>nd</sup> June 2025</div>
+                    <div class="timeline-content">
+                        <h3>Paper Submission Starts</h3>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">15<sup>th</sup> September 2025</div>
+                    <div class="timeline-content">
+                        <h3>Deadline of Full Paper Submission</h3>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">30<sup>th</sup> October 2025</div>
+                    <div class="timeline-content">
+                        <h3>Acceptance Notification</h3>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">15<sup>th</sup> November 2025</div>
+                    <div class="timeline-content">
+                        <h3>Camera Ready Submission</h3>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">15<sup>th</sup> - 17<sup>th</sup> December 2025</div>
+                    <div class="timeline-content">
+                        <h3>Conclave Dates</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee Section -->
     <section id="committee" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="section-title" data-aos="fade-up">Organizing Committee</h2>
                 <div class="section-divider"></div>
             </div>
-            
-            <div class="committee-container">
-                <!-- Chief Patron -->
-                <div class="committee-category" data-aos="fade-up">
-                    <h3 class="committee-category-title">Chief Patron</h3>
-                    <div class="flex flex-wrap justify-center">
-                        <div class="committee-member">
-                            <div class="member-photo">
-                                <img src="./images/organizers/director.png" alt="Director">
-                                <!-- <div class="member-overlay">
-                                    <div class="member-contact">
-                                        <div class="contact-item">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="contact-info">director@nitrr.ac.in</span>
-                                            <button class="copy-btn" data-copy="director@nitrr.ac.in">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                        <div class="contact-item">
-                                            <i class="fas fa-phone"></i>
-                                            <span class="contact-info">+91 XXXXXXXXXX</span>
-                                            <button class="copy-btn" data-copy="+91 XXXXXXXXXX">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
-                            <h4>Prof. N.V. Ramana Rao</h4>
-                            <p>Director, NIT Raipur</p>
+
+            <!-- Hierarchy Tree -->
+            <div class="hierarchy">
+                <!-- Layer 1: Chief Patron -->
+                <div class="layer chief">
+                    <div class="committee-card" data-aos="fade-up">
+                        <h3>Chief Patron</h3>
+                        <div class="committee-image">
+                            <img src="./images/organizers/director.png" alt="Director">
+                        </div>
+                        <p class="font-semibold">Prof. N.V Ramana Rao</p>
+                        <p>Director, NIT Raipur</p>
+                        <div class="contact-icons">
+                            <button class="copy-btn" data-copy="director@nitrr.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="copy-btn" data-copy="+91-1234567890">
+                                <i class="fas fa-phone"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Patrons -->
-                <div class="committee-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="committee-category-title">Patrons</h3>
-                    <div class="flex flex-wrap justify-center">
-                        <div class="committee-member">
-                            <div class="member-photo">
-                                <img src="./images/organizers/patron_1.png" alt="Patron 1">
-                                <div class="member-overlay">
-                                    <div class="member-contact">
-                                        <div class="contact-item">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="contact-info">shrishverma@nitrr.ac.in</span>
-                                            <button class="copy-btn" data-copy="shrishverma@nitrr.ac.in">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Prof. Shrish Verma</h4>
-                            <p>NIT Raipur</p>
+
+                <!-- Layer 2: Patrons -->
+                <div class="layer patrons">
+                    <div class="committee-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Patron</h3>
+                        <div class="committee-image">
+                            <img src="./images/organizers/patron_1.png" alt="Patron 1">
                         </div>
-                        
-                        <div class="committee-member">
-                            <div class="member-photo">
-                                <img src="./images/organizers/patron_2.png" alt="Patron 2">
-                                <div class="member-overlay">
-                                    <div class="member-contact">
-                                        <div class="contact-item">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="contact-info">gpscmishra.ece@nitrr.ac.in</span>
-                                            <button class="copy-btn" data-copy="gpscmishra.ece@nitrr.ac.in">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Prof. G.P.S.C. Mishra</h4>
-                            <p>NIT Raipur</p>
+                        <p class="font-semibold">Prof. Shrish Verma</p>
+                        <p>NIT Raipur</p>
+                        <div class="contact-icons">
+                            <button class="copy-btn" data-copy="shrishverma@nitrr.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="copy-btn" data-copy="+91-1234567890">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="committee-card" data-aos="fade-up" data-aos-delay="150">
+                        <h3>Patron</h3>
+                        <div class="committee-image">
+                            <img src="./images/organizers/patron_2.png" alt="Patron">
+                        </div>
+                        <p class="font-semibold">Prof. G.P.S.C. Mishra</p>
+                        <p>NIT Raipur</p>
+                        <div class="contact-icons">
+                            <button class="copy-btn" data-copy="gpscmishra@nitrr.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="copy-btn" data-copy="+91-1234567890">
+                                <i class="fas fa-phone"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Chairperson -->
-                <div class="committee-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="committee-category-title">Chairperson</h3>
-                    <div class="flex flex-wrap justify-center">
-                        <div class="committee-member">
-                            <div class="member-photo">
-                                <img src="./images/organizers/chairperson.png" alt="Chairperson">
-                                <div class="member-overlay">
-                                    <div class="member-contact">
-                                        <div class="contact-item">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="contact-info">tswarnkar.mca@nitrr.ac.in</span>
-                                            <button class="copy-btn" data-copy="tswarnkar.mca@nitrr.ac.in">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Prof. Tripti Swarnkar</h4>
-                            <p>Dean (R&C), NIT Raipur</p>
+
+                <!-- Layer 3: Chairperson -->
+                <div class="layer chairpersons">
+                    <div class="committee-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Chairperson</h3>
+                        <div class="committee-image">
+                            <img src="./images/organizers/chairperson.png" alt="Chairperson">
+                        </div>
+                        <p class="font-semibold">Prof. Tripti Swarnkar</p>
+                        <p>NIT Raipur</p>
+                        <div class="contact-icons">
+                            <button class="copy-btn" data-copy="tswarnkar@nitrr.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="copy-btn" data-copy="+91-1234567890">
+                                <i class="fas fa-phone"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Organizing Secretaries -->
-                <div class="committee-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="committee-category-title">Organizing Secretaries</h3>
-                    <div class="flex flex-wrap justify-center">
-                        <div class="committee-member">
-                            <div class="member-photo">
-                                <img src="./images/organizers/anandk.jpg" alt="Organizing Secretary">
-                                <div class="member-overlay">
-                                    <div class="member-contact">
-                                        <div class="contact-item">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="contact-info">anandj.che@nitrr.ac.in</span>
-                                            <button class="copy-btn" data-copy="anandj.che@nitrr.ac.in">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Dr. J. Anandkumar</h4>
-                            <p>Associate Professor, NIT Raipur</p>
+
+                <!-- Layer 4: Organizing Secretaries -->
+                <div class="layer secretaries">
+                    <div class="committee-card" data-aos="fade-up" data-aos-delay="250">
+                        <h3>Organizing Secretary</h3>
+                        <div class="committee-image">
+                            <img src="./images/organizers/anandk.jpg" alt="Secretary">
                         </div>
-                        
-                        <div class="committee-member">
-                            <div class="member-photo">
-                                <img src="./images/organizers/manwendra.jpg" alt="Organizing Secretary">
-                                <div class="member-overlay">
-                                    <div class="member-contact">
-                                        <div class="contact-item">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="contact-info">mktripathi.mme@nitrr.ac.in</span>
-                                            <button class="copy-btn" data-copy="mktripathi.mme@nitrr.ac.in">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Dr. Manwendra K. Tripathi</h4>
-                            <p>Associate Professor, NIT Raipur</p>
+                        <p class="font-semibold">Dr. J. Anandkumar</p>
+                        <p>Associate Professor, NIT Raipur</p>
+                        <div class="contact-icons">
+                            <button class="copy-btn" data-copy="anandj.che@nitrr.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="copy-btn" data-copy="+91-9669715209">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="committee-card" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Organizing Secretary</h3>
+                        <div class="committee-image">
+                            <img src="./images/organizers/manwendra.jpg" alt="Secretary">
+                        </div>
+                        <p class="font-semibold">Dr. Manwendra K. Tripathi</p>
+                        <p>Associate Professor, NIT Raipur</p>
+                        <div class="contact-icons">
+                            <button class="copy-btn" data-copy="mktripathi.met@nitrr.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="copy-btn" data-copy="+91-8103766514">
+                                <i class="fas fa-phone"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -513,47 +735,53 @@
                 <h2 class="section-title" data-aos="fade-up">Previous Conclaves</h2>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="conclave-carousel" data-aos="fade-up">
                 <div class="carousel-container">
                     <div class="carousel-track">
                         <!-- Conclave 2024 -->
                         <div class="carousel-slide">
                             <div class="conclave-card">
-                                <img src="./images/conclaves/conclave_2024_1.png" alt="Conclave 2024" class="conclave-image">
+                                <img src="./images/conclaves/conclave_2024_1.png" alt="Conclave 2024"
+                                    class="conclave-image">
                                 <div class="conclave-content">
                                     <h3>Research Scholar's Conclave 2024</h3>
                                     <p>Focused on sustainable technologies and AI integration in research.</p>
-                                    <a href="https://sites.google.com/view/researchscholarsconclave2022" class="conclave-link" target="_blank">View Details</a>
+                                    <a href="https://sites.google.com/view/researchscholarsconclave2022"
+                                        class="conclave-link" target="_blank">View Details</a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Conclave 2023 -->
                         <div class="carousel-slide">
                             <div class="conclave-card">
-                                <img src="./images/conclaves/conclave_2024_2.png" alt="Conclave 2023" class="conclave-image">
+                                <img src="./images/conclaves/conclave_2024_2.png" alt="Conclave 2023"
+                                    class="conclave-image">
                                 <div class="conclave-content">
                                     <h3>Research Scholar's Conclave 2023</h3>
                                     <p>Explored innovations in renewable energy and smart materials.</p>
-                                    <a href="https://sites.google.com/view/researchscholarsconclave2022" class="conclave-link" target="_blank">View Details</a>
+                                    <a href="https://sites.google.com/view/researchscholarsconclave2022"
+                                        class="conclave-link" target="_blank">View Details</a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Conclave 2022 -->
                         <div class="carousel-slide">
                             <div class="conclave-card">
-                                <img src="./images//conclaves/conclave_2022.png" alt="Conclave 2022" class="conclave-image">
+                                <img src="./images/conclaves/conclave_2022.png" alt="Conclave 2022"
+                                    class="conclave-image">
                                 <div class="conclave-content">
                                     <h3>Research Scholar's Conclave 2022</h3>
                                     <p>Featured breakthrough research in biotechnology and healthcare.</p>
-                                    <a href="https://sites.google.com/view/researchscholarsconclave2022" class="conclave-link" target="_blank">View Details</a>
+                                    <a href="https://sites.google.com/view/researchscholarsconclave2022"
+                                        class="conclave-link" target="_blank">View Details</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <button class="carousel-button prev" aria-label="Previous slide">
                         <i class="fas fa-chevron-left"></i>
                     </button>
@@ -561,7 +789,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
-                
+
                 <div class="carousel-indicators">
                     <button class="indicator active" data-index="0" aria-label="Go to slide 1"></button>
                     <button class="indicator" data-index="1" aria-label="Go to slide 2"></button>
@@ -581,12 +809,12 @@
                     Distinguished speakers from academia and industry will share their insights and research during the conclave.
                 </p> -->
             </div>
-            
+
             <div class="speakers-grid row justify-center wrap">
                 <!-- To be announced soon message -->
                 <div class="text-center w-full" data-aos="fade-up">
-                    <h3 class="text-white text-2xl font-bold mb-4">To be announced soon</h3>
-                    <p class="text-white text-lg">Stay tuned for updates on our distinguished keynote speakers.</p>
+                    <h3 class="text-black text-2xl font-bold mb-4">To be announced soon</h3>
+                    <p class="text-gray-800 text-lg">Stay tuned for updates on our distinguished keynote speakers.</p>
                 </div>
 
                 <!-- 
@@ -665,16 +893,19 @@
                 <h2 class="section-title" data-aos="fade-up">Venue</h2>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="flex flex-col lg:flex-row">
                 <div class="lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0" data-aos="fade-right">
                     <div class="venue-info bg-gray-50 p-6 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-bold text-primary mb-4">National Institute of Technology Raipur</h3>
                         <p class="mb-4 text-gray-700">
-                            Established in 1956, NIT Raipur is one of the premier technical institutes in India. Located in the capital city of Chhattisgarh, the institute offers a vibrant academic environment with excellent infrastructure and facilities.
+                            Established in 1956, NIT Raipur is one of the premier technical institutes in India. Located
+                            in the capital city of Chhattisgarh, the institute offers a vibrant academic environment
+                            with excellent infrastructure and facilities.
                         </p>
                         <p class="mb-4 text-gray-700">
-                            The Research Scholar's Conclave 2025 will be held in the state-of-the-art Auditorium Complex, which provides an ideal setting for academic exchanges and collaborations.
+                            The Research Scholar's Conclave 2025 will be held in the state-of-the-art Auditorium
+                            Complex, which provides an ideal setting for academic exchanges and collaborations.
                         </p>
                         <div class="venue-address mt-6">
                             <h4 class="font-bold text-gray-800 mb-2">Address:</h4>
@@ -686,15 +917,17 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="lg:w-1/2" data-aos="fade-left">
                     <div class="campus-gallery">
                         <div class="gallery-grid">
                             <div class="gallery-item">
-                                <img src="./images/campus//nitrr_campus.png" alt="NIT Raipur Campus" class="gallery-image">
+                                <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus"
+                                    class="gallery-image">
                             </div>
                             <div class="gallery-item">
-                                <img src="./images/campus//nitrr_main_building.png" alt="NIT Raipur Building" class="gallery-image">
+                                <img src="./images/campus/nitrr_main_building.png" alt="NIT Raipur Building"
+                                    class="gallery-image">
                             </div>
                             <div class="gallery-item">
                                 <img src="./images/campus/nitrr_ccc.png" alt="Computer Center" class="gallery-image">
@@ -706,15 +939,17 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="map-container mt-12" data-aos="zoom-in">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.531177335056!2d81.60484261493169!3d21.24959998585958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology%2C%20Raipur!5e0!3m2!1sen!2sin!4v1616654532674!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.531177335056!2d81.60484261493169!3d21.24959998585958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology%2C%20Raipur!5e0!3m2!1sen!2sin!4v1616654532674!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-primary text-white pt-16 pb-8"  id="footer">
+    <footer class="bg-primary text-white pt-16 pb-8" id="footer">
         <div class="container mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Column 1: Site  -->
@@ -724,7 +959,7 @@
                         <img src="./images/nitrr_logo.png" alt="NIT Raipur Logo" class="h-40 mx-auto">
                     </div>
                 </div>
-                
+
                 <!-- Column 2: Important Links -->
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
@@ -737,7 +972,7 @@
                         <li><a href="#venue">Venue</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Column 3: Related Links -->
                 <div>
                     <h3 class="text-xl font-bold mb-4">Related Links</h3>
@@ -747,13 +982,14 @@
                         <li><a href="#previous-conclaves">Previous Conclaves</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Column 4: Contact Us -->
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Us</h3>
                     <div class="flex items-start mb-3">
                         <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                        <p>National Institute of Technology Raipur<br>G.E. Road, Raipur<br>Chhattisgarh - 492010, India</p>
+                        <p>National Institute of Technology Raipur<br>G.E. Road, Raipur<br>Chhattisgarh - 492010, India
+                        </p>
                     </div>
                     <!-- <div class="flex items-center mb-3">
                         <i class="fas fa-phone mr-3"></i>
@@ -764,15 +1000,20 @@
                         <p>conclave2025@nitrr.ac.in</p>
                     </div> -->
                     <div class="social-icons flex mt-4">
-                        <a href="https://www.linkedin.com/school/national-institute-of-technology-raipur/posts/?feedView=all" target="_blank" class="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/nitrr.raipur/" target="_blank" class="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/nit_raipur/" target="_blank" class="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/NITRR" target="_blank" class="" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank" class="" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/national-institute-of-technology-raipur/posts/?feedView=all"
+                            target="_blank" class="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/nitrr.raipur/" target="_blank" class=""
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nit_raipur/" target="_blank" class=""
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/NITRR" target="_blank" class="" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank" class=""
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-700 pt-8 mt-8 text-center">
                 <div class="flex flex-col md:flex-row justify-center items-center text-gray-300">
                     <div>
@@ -785,10 +1026,10 @@
 
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="script.js"></script>
-    
+
     <script>
         // Initialize AOS animation
         AOS.init({
@@ -796,67 +1037,157 @@
             once: true,
             easing: 'ease-in-out',
         });
-        
+
         // Mobile Menu Toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         // Carousel functionality
-        $(document).ready(function() {
+        $(document).ready(function () {
             let currentIndex = 0;
             const slides = $('.carousel-slide');
             const totalSlides = slides.length;
             const indicators = $('.indicator');
-            
+
             // Set initial position
             updateCarousel();
-            
+
             // Next button
-            $('.carousel-button.next').click(function() {
+            $('.carousel-button.next').click(function () {
                 currentIndex = (currentIndex + 1) % totalSlides;
                 updateCarousel();
             });
-            
+
             // Previous button
-            $('.carousel-button.prev').click(function() {
+            $('.carousel-button.prev').click(function () {
                 currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
                 updateCarousel();
             });
-            
+
             // Indicator buttons
-            indicators.each(function(index) {
-                $(this).click(function() {
+            indicators.each(function (index) {
+                $(this).click(function () {
                     currentIndex = index;
                     updateCarousel();
                 });
             });
-            
+
             function updateCarousel() {
                 const offset = -currentIndex * 100;
                 $('.carousel-track').css('transform', `translateX(${offset}%)`);
-                
+
                 // Update indicators
                 indicators.removeClass('active');
                 indicators.eq(currentIndex).addClass('active');
             }
-            
+
             // Auto-slide
-            setInterval(function() {
+            setInterval(function () {
                 currentIndex = (currentIndex + 1) % totalSlides;
                 updateCarousel();
             }, 5000);
-            
-            // Copy email functionality
-            $('.copy-btn').click(function(e) {
-                e.stopPropagation();
-                const textToCopy = $(this).data('copy');
-                navigator.clipboard.writeText(textToCopy).then(function() {
-                    alert('Email copied to clipboard!');
+
+            // Copy to clipboard functionality using jQuery
+            $(document).on('click', '.copy-btn', function () {
+                const text = $(this).attr('data-copy');
+                const $btn = $(this);
+
+                // Remove any existing tooltips
+                $('.tooltip').remove();
+
+                // Create tooltip element and position it relative to the button
+                const $tooltip = $('<div class="tooltip">Copied!</div>');
+                $btn.parent().append($tooltip);
+
+                // Position absolute needs a positioned parent
+                $btn.parent().css('position', 'relative');
+
+                navigator.clipboard.writeText(text).then(function () {
+                    // Add success animation to button
+                    $btn.addClass('copy-success');
+
+                    // Show tooltip with a slight delay for animation
+                    setTimeout(function () {
+                        $tooltip.addClass('show');
+                    }, 10);
+
+                    // Remove tooltip after delay
+                    setTimeout(function () {
+                        $tooltip.removeClass('show');
+                        setTimeout(function () {
+                            $tooltip.remove();
+                        }, 300);
+                    }, 1000);
+
+                    // Remove animation class from button
+                    setTimeout(function () {
+                        $btn.removeClass('copy-success');
+                    }, 500);
+                }).catch(function (err) {
+                    console.error('Failed to copy:', err);
+
+                    // Fallback for browsers without clipboard API
+                    const $textArea = $('<textarea>').val(text).css('position', 'fixed');
+                    $('body').append($textArea);
+                    $textArea.focus().select();
+
+                    try {
+                        document.execCommand('copy');
+                        $tooltip.text('Copied!').addClass('show');
+
+                        setTimeout(function () {
+                            $tooltip.removeClass('show');
+                            setTimeout(function () {
+                                $tooltip.remove();
+                            }, 300);
+                        }, 1000);
+                    } catch (err) {
+                        console.error('Fallback: Unable to copy', err);
+                        $tooltip.text('Copy failed').addClass('show');
+
+                        setTimeout(function () {
+                            $tooltip.removeClass('show');
+                            setTimeout(function () {
+                                $tooltip.remove();
+                            }, 300);
+                        }, 1000);
+                    }
+
+                    $textArea.remove();
                 });
+
+                // Prevent the onclick attribute from firing
+                return false;
             });
         });
+
+        // This empty function prevents the inline onclick handlers from executing
+        function copyToClipboard(text) {
+            // Function intentionally left empty as we're using the jQuery handler
+            return false;
+        }
+    </script>
+
+    <script>
+        // Handle timeline animations
+        function checkTimelineReveal() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            timelineItems.forEach(item => {
+                const position = item.getBoundingClientRect();
+                // If the item is in the viewport
+                if (position.top < window.innerHeight * 0.85) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Check on page load and scroll
+        window.addEventListener('load', checkTimelineReveal);
+        window.addEventListener('scroll', checkTimelineReveal);
     </script>
 </body>
+
 </html>

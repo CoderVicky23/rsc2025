@@ -250,256 +250,492 @@ section:nth-child(even) .speaker-social a:hover {
     opacity: 0.9;
 }
 
-/* Timeline Styles */
+/* Enhanced Timeline Section */
 .timeline {
-    position: relative;
-    max-width: 500px;
-    margin: 0 auto;
+    padding: 6rem 0;
+    background-color: var(--neutral-100);
 }
 
-.timeline:before {
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-container::after {
     content: '';
     position: absolute;
+    width: 3px;
+    background-color: var(--background-light);
     top: 0;
     bottom: 0;
-    left: 20px;
-    width: 4px;
-    background: var(--secondary-color);
-    border-radius: 2px;
+    left: 50%;
+    margin-left: -1.5px;
+    opacity: 0.6;
 }
 
 .timeline-item {
+    padding: 10px 40px;
     position: relative;
-    padding: 0 0 1rem 50px;
+    z-index: 1;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.timeline-item:last-child {
-    padding-bottom: 0;
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
 }
 
 .timeline-dot {
     position: absolute;
-    left: 10px;
-    top: 5px;
     width: 24px;
     height: 24px;
+    background-color: var(--secondary-color);
+    border: 4px solid #fff;
     border-radius: 50%;
-    background: var(--secondary-color);
-    border: 4px solid var(--background-mixed);
-    box-shadow: var(--box-shadow);
+    z-index: 1;
+    right: -12px;
+    top: 15px;
+    box-shadow: 0 0 0 4px rgba(244, 169, 80, 0.2);
+    transition: var(--transition);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -12px;
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--background-light);
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content {
-    background: var(--card-bg-light);
-    padding: 1.25rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-left: 3px solid var(--secondary-color);
+    transition: var(--transition);
 }
 
-section:nth-child(even) .timeline-content {
-    background: var(--card-bg-dark);
-    color: var(--light-text);
+.timeline-item:nth-child(even) .timeline-content {
+    border-left: none;
+    border-right: 3px solid var(--secondary-color);
 }
 
-section:nth-child(even) .timeline-dot {
-    border-color: var(--section-bg-dark);
-}
-
-section:nth-child(even) .timeline-content h3 {
-    color: var(--light-text);
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
     color: var(--primary-color);
-}
-
-.timeline-content p {
-    color: var(--text-color);
-    margin: 0;
-}
-
-section:nth-child(even) .timeline-content p {
-    color: var(--light-text);
-}
-
-/* Committee Styles */
-.committee-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-@media (min-width: 768px) {
-    .committee-container {
-        gap: 3rem;
-    }
-}
-
-.committee-category-title {
-    text-align: center;
-    font-size: 1.3rem;
-    color: var(--light-color);
-    margin-bottom: 1.25rem;
+    margin-bottom: 0;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
-@media (min-width: 768px) {
-    .committee-category-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+/* Animation classes for timeline */
+.reveal-left {
+    transform: translateX(-30px);
+}
+
+.reveal-right {
+    transform: translateX(30px);
+}
+
+.reveal-left.active, .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation delays */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+@media (max-width: 768px) {
+    .timeline-container::after {
+        left: 15px;
+    }
+    
+    .timeline-dot {
+        left: 5px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 5px;
+    }
+    
+    .timeline-content {
+        width: 100%;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        border-right: none;
+        border-left: 3px solid var(--secondary-color);
     }
 }
 
-.committee-member {
+/* Committee Section Styles */
+.committee {
+    padding: 6rem 0;
+    background-color: var(--section-bg-light);
     position: relative;
-    width: 90%;
-    max-width: 300px;
-    margin: 0.75rem auto;
-    background-color: var(--card-bg-light);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    text-align: center;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section:nth-child(even) .committee-member {
-    background-color: var(--card-bg-dark);
+/* Decorative elements for committee section */
+.committee::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(17, 43, 82, 0.1) 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+    border-radius: 50%;
+    z-index: 0;
 }
 
-section:nth-child(even) .committee-member h4 {
-    color: var(--light-text);
+.committee::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(244, 169, 80, 0.1) 0%, transparent 70%);
+    bottom: -80px;
+    right: -80px;
+    border-radius: 50%;
+    z-index: 0;
 }
 
-section:nth-child(even) .committee-member p {
-    color: #e0e0e0;
-}
-
-@media (min-width: 480px) {
-    .committee-member {
-        width: 85%;
-        max-width: 320px;
-    }
-}
-
-@media (min-width: 768px) {
-    .committee-member {
-        width: 250px;
-        max-width: 250px;
-        margin: 0.75rem;
-    }
-}   
-
-.committee-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.member-photo {
+/* Hierarchy layout */
+.hierarchy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
     position: relative;
-    overflow: hidden;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    z-index: 1;
 }
 
-.member-photo img {
+/* Layer styles */
+.layer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     width: 100%;
-    height: 220px;
+    position: relative;
+}
+
+/* Connection lines between layers */
+/* .layer:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 3rem;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+/* Chief patron layer styling */
+.layer.chief {
+    margin-bottom: 1rem;
+}
+
+/* Patrons layer styling */
+.layer.patrons {
+    margin-bottom: 1rem;
+}
+
+/* Chairperson layer styling */
+.layer.chairpersons {
+    margin-bottom: 1rem;
+}
+
+/* Secretary layer styling */
+.layer.secretaries {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Enhanced committee card with animations */
+.committee-card {
+    background-color: var(--card-bg-light);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effects */
+.committee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Image styles */
+.committee-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    padding: 3px;
+    background-color: var(--primary-color);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.committee-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 50%;
     transition: transform 0.5s ease;
 }
 
-@media (min-width: 768px) {
-    .member-photo img {
-        height: 200px;
-    }
+.committee-card:hover .committee-image {
+    background-color: var(--secondary-color);
 }
 
-.committee-member:hover .member-photo img {
-    transform: scale(1.05);
+/* Text Styling */
+.committee-card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
 }
 
-.member-overlay {
+.committee-card p {
+    color: var(--text-color);
+    font-size: var(--font-size-md);
+    margin-bottom: 0.3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.committee-card p.font-semibold {
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+/* Contact icons */
+.contact-icons {
+    margin-top: 1.2rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--light-text);
+}
+
+.copy-btn {
+    background-color: var(--primary-color);
+    color: var(--neutral-100);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.copy-btn::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(17, 43, 82, 0.85);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: 1rem;
-}
-
-.committee-member:hover .member-overlay {
-    opacity: 1;
-}
-
-.member-contact {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem;
-    border-radius: 4px;
-}
-
-.contact-item i {
-    min-width: 20px;
-}
-
-.contact-info {
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: left;
-    font-size: 0.9rem;
-}
-
-.copy-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .copy-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.committee-member h4 {
-    margin: 1rem 0 0.25rem;
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    font-weight: 600;
+.copy-btn:hover::before {
+    opacity: 1;
 }
 
-.committee-member p {
-    margin: 0 0 1rem;
-    font-size: 0.9rem;
-    color: #666;
+.copy-btn i {
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .layer {
+        gap: 1.5rem;
+    }
+    
+    .committee-card {
+        width: 250px;
+        padding: 2rem 1rem;
+    }
+    
+    .committee-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hierarchy {
+        gap: 2.5rem;
+    }
+    
+    .layer:not(:last-child)::after {
+        height: 2.5rem;
+        bottom: -2.5rem;
+    }
+    
+    .layer.secretaries {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .committee-card {
+        width: 280px;
+    }
+}
+
+/* Copy to clipboard animation */
+@keyframes copySuccess {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.copy-success {
+    animation: copySuccess 0.5s ease-in-out;
+}
+
+/* Tooltip style for copy feedback */
+.tooltip {
+    position: absolute;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--primary-color) transparent;
+}
+
+.tooltip.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Legacy toast notification style (keeping for compatibility) */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.toast-hide {
+    opacity: 0;
 }
 
 /* Carousel Styles */
@@ -1021,4 +1257,128 @@ footer h3::after {
 @keyframes slideInRight {
     from { transform: translateX(50px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
+}
+
+/* Track styles */
+.tracks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.track-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.track-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.track-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 12px;
+    font-size: 1.1rem;
+}
+
+.track-card h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.track-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.track-subtracks {
+    margin-top: auto;
+    background-color: rgba(241, 245, 249, 0.6);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.track-subtracks h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.track-subtracks ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.track-subtracks li {
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+.subtracks-list {
+    background-color: rgba(241, 245, 249, 0.6);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.subtracks-list h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.subtracks-list ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.subtracks-list li {
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .track-card {
+        padding: 1.5rem;
+    }
+    
+    .subtracks-list {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .track-card {
+        padding: 1.25rem;
+    }
+    
+    .subtracks-list ul {
+        padding-left: 1.25rem;
+    }
 }
