@@ -56,6 +56,27 @@ section:nth-child(even) .section-title {
     color: var(--light-text);
 }
 
+/* Make sure text in even sections (dark backgrounds) is light */
+/* section:nth-child(even) h4,
+section:nth-child(even) p,
+section:nth-child(even) .speaker-name,
+section:nth-child(even) .speaker-title,
+section:nth-child(even) .speaker-bio {
+    color: var(--light-text) !important;
+} */
+
+/* Ensure social icons in even sections are visible */
+section:nth-child(even) .speaker-social a {
+    /* background: rgba(255, 255, 255, 0.2); */
+    background: var(--section-bg-dark);
+    color: var(--light-text);
+}
+
+section:nth-child(even) .speaker-social a:hover {
+    background: var(--secondary-color);
+    color: var(--light-text);
+}
+
 @media (min-width: 768px) {
     section {
         padding: 4rem 2rem;
@@ -319,7 +340,7 @@ section:nth-child(even) .timeline-content p {
 .committee-category-title {
     text-align: center;
     font-size: 1.3rem;
-    color: var(--primary-color);
+    color: var(--light-color);
     margin-bottom: 1.25rem;
     font-weight: 600;
 }
@@ -353,7 +374,7 @@ section:nth-child(even) .committee-member h4 {
 }
 
 section:nth-child(even) .committee-member p {
-    color: #aaa;
+    color: #e0e0e0;
 }
 
 @media (min-width: 480px) {
@@ -646,7 +667,7 @@ section:nth-child(even) .speaker-name {
 
 section:nth-child(even) .speaker-title,
 section:nth-child(even) .speaker-bio {
-    color: #aaa;
+    color: #e0e0e0;
 }
 
 @media (min-width: 640px) {
