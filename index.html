@@ -96,19 +96,29 @@
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-8 text-sm md:text-base lg:text-lg">
                     <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
+                    <div class="dropdown relative group">
+                        <a href="#about" class="nav-link flex items-center">
+                            About <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="w-fit dropdown-menu">
+                            <a href="#about">The Conclave</a>
+                            <a href="#venue">NIT Raipur</a>
+                            <a href="#raipur">Raipur City</a>
+                            <a href="#chhattisgarh">Chhattisgarh State</a>
+                        </div>
+                    </div>
                     <a href="#tracks" class="nav-link">Tracks</a>
+                    <a href="#speakers" class="nav-link">Speakers</a>
                     <div class="dropdown relative group">
                         <a href="#committee" class="nav-link flex items-center">
                             Committee <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </a>
                         <div class="w-fit dropdown-menu">
                             <a href="#committee">Organizing Committee</a>
-                            <!-- <a href="#committee">Advisory Committee</a> -->
+                            <a href="#advisory-board">Advisory Board</a>
+                            <a href="#tech-prog-committee">Technical Program Committee</a>
                         </div>
                     </div>
-                    <a href="#speakers" class="nav-link">Speakers</a>
-                    <a href="#venue" class="nav-link">Venue</a>
                     <a href="#footer" class="nav-link">Contact</a>
                     <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank"
                         class="btn-primary">
@@ -131,8 +141,8 @@
                 <a href="#tracks" class="mobile-nav-link">Tracks</a>
                 <a href="#committee" class="mobile-nav-link">Committee</a>
                 <a href="#speakers" class="mobile-nav-link">Speakers</a>
-                <a href="#venue" class="mobile-nav-link">Venue</a>
-                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <a href="#venue" class="mobile-nav-link">NIT Raipur</a>
+                <a href="#footer" class="mobile-nav-link">Contact</a>
                 <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank"
                     class="mobile-btn-primary">
                     <i class="fab fa-youtube mr-2"></i> Watch
@@ -155,7 +165,7 @@
                     <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-lg border border-white/20 shadow-xl">
                         <span
                             class="inline-block px-4 py-1 bg-secondary/90 text-white rounded-full text-sm font-medium mb-4">December
-                            19-20, 2025</span>
+                            15<sup>th</sup> - 17<sup>th</sup>, 2025</span>
                         <h1 class="text-3xl md:text-5xl font-bold mb-3 leading-tight">Research Scholar's Conclave 2025
                         </h1>
                         <div class="w-20 h-1 bg-secondary mb-6"></div>
@@ -216,27 +226,27 @@
             <div class="glimpse-carousel" data-aos="fade-up">
                 <div class="glimpse-carousel-track">
                     <!-- Image 1 -->
-                    <div class="glimpse-slide">
+                    <div class="glimpse-slide" data-index="0">
                         <img src="./images/RC2024/1.JPG" alt="RSC 2024 Image 1" class="glimpse-image">
                     </div>
 
                     <!-- Image 2 -->
-                    <div class="glimpse-slide">
+                    <div class="glimpse-slide" data-index="1">
                         <img src="./images/RC2024/2.JPG" alt="RSC 2024 Image 2" class="glimpse-image">
                     </div>
 
                     <!-- Image 3 -->
-                    <div class="glimpse-slide">
+                    <div class="glimpse-slide" data-index="2">
                         <img src="./images/RC2024/3.JPG" alt="RSC 2024 Image 3" class="glimpse-image">
                     </div>
 
                     <!-- Image 4 -->
-                    <div class="glimpse-slide">
+                    <div class="glimpse-slide" data-index="3">
                         <img src="./images/RC2024/4.JPG" alt="RSC 2024 Image 4" class="glimpse-image">
                     </div>
 
                     <!-- Image 5 -->
-                    <div class="glimpse-slide">
+                    <div class="glimpse-slide" data-index="4">
                         <img src="./images/RC2024/5.jpg" alt="RSC 2024 Image 5" class="glimpse-image">
                     </div>
                 </div>
@@ -249,7 +259,7 @@
                 </button> -->
 
                 <div class="glimpse-indicators">
-                    <button class="glimpse-indicator active" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="glimpse-indicator" data-index="0" aria-label="Go to slide 1"></button>
                     <button class="glimpse-indicator" data-index="1" aria-label="Go to slide 2"></button>
                     <button class="glimpse-indicator" data-index="2" aria-label="Go to slide 3"></button>
                     <button class="glimpse-indicator" data-index="3" aria-label="Go to slide 4"></button>
@@ -270,27 +280,27 @@
             <div class="news-clips-carousel" data-aos="fade-up">
                 <div class="news-clips-track">
                     <!-- News Clip 1 -->
-                    <div class="news-clip-slide">
+                    <div class="news-clip-slide" data-index="0">
                         <img src="./images/News/1.jpeg" alt="News Clip 1" class="news-clip-image">
                     </div>
 
                     <!-- News Clip 2 -->
-                    <div class="news-clip-slide">
+                    <div class="news-clip-slide" data-index="1">
                         <img src="./images/News/2.jpeg" alt="News Clip 2" class="news-clip-image">
                     </div>
 
                     <!-- News Clip 3 -->
-                    <div class="news-clip-slide">
+                    <div class="news-clip-slide" data-index="2">
                         <img src="./images/News/3.jpeg" alt="News Clip 3" class="news-clip-image">
                     </div>
 
                     <!-- News Clip 4 -->
-                    <div class="news-clip-slide">
+                    <div class="news-clip-slide" data-index="3">
                         <img src="./images/News/4.jpeg" alt="News Clip 4" class="news-clip-image">
                     </div>
 
                     <!-- News Clip 5 -->
-                    <div class="news-clip-slide">
+                    <div class="news-clip-slide" data-index="4">
                         <img src="./images/News/5.jpeg" alt="News Clip 5" class="news-clip-image">
                     </div>
                 </div>
@@ -303,7 +313,7 @@
                 </button> -->
 
                 <div class="news-clips-indicators">
-                    <button class="news-clips-indicator active" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="news-clips-indicator" data-index="0" aria-label="Go to slide 1"></button>
                     <button class="news-clips-indicator" data-index="1" aria-label="Go to slide 2"></button>
                     <button class="news-clips-indicator" data-index="2" aria-label="Go to slide 3"></button>
                     <button class="news-clips-indicator" data-index="3" aria-label="Go to slide 4"></button>
@@ -982,77 +992,6 @@
         </div>
     </section>
 
-    <!-- Previous Conclaves Section -->
-    <!-- <section id="previous-conclaves" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="section-title" data-aos="fade-up">Previous Conclaves</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="conclave-carousel" data-aos="fade-up">
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                        -- Conclave 2024 --
-                        <div class="carousel-slide">
-                            <div class="conclave-card">
-                                <img src="./images/conclaves/conclave_2024_1.png" alt="Conclave 2024"
-                                    class="conclave-image">
-                                <div class="conclave-content">
-                                    <h3>Research Scholar's Conclave 2024</h3>
-                                    <p>Focused on sustainable technologies and AI integration in research.</p>
-                                    <a href="https://sites.google.com/view/researchscholarsconclave2022"
-                                        class="conclave-link" target="_blank">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        -- Conclave 2023 --
-                        <div class="carousel-slide">
-                            <div class="conclave-card">
-                                <img src="./images/conclaves/conclave_2024_2.png" alt="Conclave 2023"
-                                    class="conclave-image">
-                                <div class="conclave-content">
-                                    <h3>Research Scholar's Conclave 2023</h3>
-                                    <p>Explored innovations in renewable energy and smart materials.</p>
-                                    <a href="https://sites.google.com/view/researchscholarsconclave2022"
-                                        class="conclave-link" target="_blank">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        -- Conclave 2022 --
-                        <div class="carousel-slide">
-                            <div class="conclave-card">
-                                <img src="./images/conclaves/conclave_2022.png" alt="Conclave 2022"
-                                    class="conclave-image">
-                                <div class="conclave-content">
-                                    <h3>Research Scholar's Conclave 2022</h3>
-                                    <p>Featured breakthrough research in biotechnology and healthcare.</p>
-                                    <a href="https://sites.google.com/view/researchscholarsconclave2022"
-                                        class="conclave-link" target="_blank">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="carousel-button prev" aria-label="Previous slide">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-button next" aria-label="Next slide">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-
-                <div class="carousel-indicators">
-                    <button class="indicator active" data-index="0" aria-label="Go to slide 1"></button>
-                    <button class="indicator" data-index="1" aria-label="Go to slide 2"></button>
-                    <button class="indicator" data-index="2" aria-label="Go to slide 3"></button>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- advisory board -->
     <section id="advisory-board" class="py-8 xl:py-16 bg-gray-900">
         <div class="container mx-auto px-4">
@@ -1211,8 +1150,7 @@
                     College
                     Raipur) spared over an area of 100 acres and located in Raipur, the Capital City of Chhattisgarh
                     State. Raipur city is well connected with Mumbai, Delhi, Chennai, Visakhapatnam, Nagpur &amp;
-                    Bhubneshwar by regular flights and is on the main Howrah-Mumbai railway line route. The institute is
-                    5 km from Raipur railway station and 14 km from airport on NH-6, the Great Eastern Road. NIT Raipur
+                    Bhubneshwar by regular flights and is on the main Howrah-Mumbai railway line route. NIT Raipur
                     has proven to be "avant-grade' in the field of science and technology over past few decades in this
                     region. With sweet memory of foundation ceremony by our president Hon'ble Dr. Rajendra Prasad on
                     14<sup>th</sup> September 1956. the institute started with two departments namely Metallurgical and
@@ -1235,20 +1173,20 @@
             <!-- Campus Images Carousel -->
             <div class="campus-carousel" data-aos="fade-up">
                 <div class="campus-carousel-track">
-                    <div class="campus-slide" data-aos="fade-up">
+                    <div class="campus-slide" data-index="0" data-aos="fade-up">
                         <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus" class="campus-image">
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="100">
                         <img src="./images/campus/nitrr_main_building.png" alt="NIT Raipur Building"
                             class="campus-image">
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="200">
                         <img src="./images/campus/nitrr_ccc.png" alt="Computer Center" class="campus-image">
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="300">
                         <img src="./images/campus/nitrr_library.png" alt="Library" class="campus-image">
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="campus-slide" data-index="4" data-aos="fade-up" data-aos-delay="400">
                         <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus" class="campus-image">
                     </div>
                 </div>
@@ -1261,19 +1199,18 @@
                 </button> -->
 
                 <div class="campus-indicators">
-                    <button class="campus-indicator" aria-label="Go to slide 1"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 2"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 3"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 4"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 5"></button>
+                    <button class="campus-indicator" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="campus-indicator" data-index="1" aria-label="Go to slide 2"></button>
+                    <button class="campus-indicator" data-index="2" aria-label="Go to slide 3"></button>
+                    <button class="campus-indicator" data-index="3" aria-label="Go to slide 4"></button>
+                    <button class="campus-indicator" data-index="4" aria-label="Go to slide 5"></button>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!--About Raipur-->
-    <section id="venue" class="py-16">
+    <section id="raipur" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="section-title" data-aos="fade-up">About Raipur</h2>
@@ -1298,23 +1235,23 @@
             <!-- Campus Images Carousel -->
             <div class="campus-carousel" data-aos="fade-up">
                 <div class="campus-carousel-track">
-                    <div class="campus-slide" data-aos="fade-up">
+                    <div class="campus-slide" data-index="0" data-aos="fade-up">
                         <img src="./images/raipur/ambuja-city-center-mall.jpg" alt="ambuja" class="campus-image">
                         <h1 class="text-center text-primary">Ambuja Mall</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="100">
                         <img src="./images/raipur/inside-entry-of-muktangan.jpg" alt="muktangan" class="campus-image">
                         <h1 class="text-center text-primary">Muktangan</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="200">
                         <img src="./images/raipur/kevalya_dham_jain_temple.jpg" alt="kevalya" class="campus-image">
                         <h1 class="text-center text-primary">Kevalya Temple</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="300">
                         <img src="./images/raipur/marine_drive.jpg" alt="marine" class="campus-image">
                         <h1 class="text-center text-primary">Marine Drive</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="campus-slide" data-index="4" data-aos="fade-up" data-aos-delay="400">
                         <img src="./images/raipur/naya_raipur.jpg" alt="naya raipur" class="campus-image">
                         <h1 class="text-center text-primary">Naya Raipur</h1>
                     </div>
@@ -1328,19 +1265,18 @@
                 </button> -->
 
                 <div class="campus-indicators">
-                    <button class="campus-indicator" aria-label="Go to slide 1"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 2"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 3"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 4"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 5"></button>
+                    <button class="campus-indicator" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="campus-indicator" data-index="1" aria-label="Go to slide 2"></button>
+                    <button class="campus-indicator" data-index="2" aria-label="Go to slide 3"></button>
+                    <button class="campus-indicator" data-index="3" aria-label="Go to slide 4"></button>
+                    <button class="campus-indicator" data-index="4" aria-label="Go to slide 5"></button>
                 </div>
             </div>
         </div>
     </section>
 
     <!--About Chattisgarh-->
-
-    <section id="venue" class="py-16">
+    <section id="chhattisgarh" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="section-title" data-aos="fade-up">About Chhattisgarh</h2>
@@ -1350,7 +1286,8 @@
             <!-- Venue information (full width) -->
             <div class="text-center mb-12">
                 <!-- <h3 class="text-2xl font-bold text-secondary mb-4">National Institute of Technology Raipur</h3> -->
-                <p class="txt-justify mb-4">Chhattisgarh is a heavily forested state known for its temples and waterfalls.
+                <p class="txt-justify mb-4">Chhattisgarh is a heavily forested state known for its temples and
+                    waterfalls.
                     Situated in the heart of India with a ten thousand years old civilization it is a land ‘Full of
                     Surprises’ that attracts tourists who look forward to experience the pristine.
 
@@ -1382,23 +1319,23 @@
             <!-- Campus Images Carousel -->
             <div class="campus-carousel">
                 <div class="campus-carousel-track">
-                    <div class="campus-slide" data-aos="fade-up">
+                    <div class="campus-slide" data-index="0" data-aos="fade-up">
                         <img src="./images/chattisgarh/10.jpg" alt="10" class="campus-image">
                         <h1 class="text-center text-secondary">Mahant Ghasidas Sangrahalay</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="100">
                         <img src="./images/chattisgarh/15.jpg" alt="15" class="campus-image">
                         <h1 class="text-center text-secondary">Jogimara</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="200">
                         <img src="./images/chattisgarh/22.jpg" alt="22" class="campus-image">
                         <h1 class="text-center text-secondary">Kanger Valley National Park</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="300">
                         <img src="./images/chattisgarh/3.jpg" alt="3" class="campus-image">
                         <h1 class="text-center text-secondary">Bhoramdeo Temple</h1>
                     </div>
-                    <div class="campus-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="campus-slide" data-index="4" data-aos="fade-up" data-aos-delay="400">
                         <img src="./images/chattisgarh/4.jpg" alt="4" class="campus-image">
                         <h1 class="text-center text-secondary">Laxman Temple</h1>
                     </div>
@@ -1412,11 +1349,11 @@
                 </button> -->
 
                 <div class="campus-indicators">
-                    <button class="campus-indicator" aria-label="Go to slide 1"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 2"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 3"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 4"></button>
-                    <button class="campus-indicator" aria-label="Go to slide 5"></button>
+                    <button class="campus-indicator" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="campus-indicator" data-index="1" aria-label="Go to slide 2"></button>
+                    <button class="campus-indicator" data-index="2" aria-label="Go to slide 3"></button>
+                    <button class="campus-indicator" data-index="3" aria-label="Go to slide 4"></button>
+                    <button class="campus-indicator" data-index="4" aria-label="Go to slide 5"></button>
                 </div>
             </div>
         </div>
@@ -1527,307 +1464,93 @@
 
         // Carousel functionality
         $(document).ready(function () {
-            let currentIndex = 0;
-            const slides = $('.carousel-slide');
-            const totalSlides = slides.length;
-            const indicators = $('.indicator');
+            // Initialize Glimpse Carousel
+            initializeCarousel('.glimpse-carousel', '.glimpse-slide', '.glimpse-indicator', 3000);
 
-            // Set initial position
-            updateCarousel();
+            // Initialize News Clips Carousel
+            initializeCarousel('.news-clips-carousel', '.news-clip-slide', '.news-clips-indicator', 3500);
 
-            // Next button
-            $('.carousel-button.next').click(function () {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateCarousel();
+            // Initialize Campus Carousels
+            $('.campus-carousel').each(function () {
+                initializeCarousel($(this), '.campus-slide', '.campus-indicator', 5000);
             });
 
-            // Previous button
-            $('.carousel-button.prev').click(function () {
-                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                updateCarousel();
-            });
+            /**
+             * Initialize a carousel with proper center positioning and indicator functionality
+             * @param {string|jQuery} carouselSelector - The carousel wrapper selector or jQuery object
+             * @param {string} slideSelector - The selector for slides within this carousel
+             * @param {string} indicatorSelector - The selector for indicators within this carousel
+             * @param {number} autoRotateInterval - Milliseconds between auto rotations
+             */
+            function initializeCarousel(carouselSelector, slideSelector, indicatorSelector, autoRotateInterval) {
+                let carouselWrapper = typeof carouselSelector === 'string' ? $(carouselSelector) : carouselSelector;
+                let slides = carouselWrapper.find(slideSelector);
+                let totalSlides = slides.length;
+                let indicators = carouselWrapper.find(indicatorSelector);
+                let currentIndex = Math.min(2, Math.floor((totalSlides - 1) / 2)); // Default to middle slide, but don't exceed array bounds
 
-            // Indicator buttons
-            indicators.each(function (index) {
-                $(this).click(function () {
-                    currentIndex = index;
-                    updateCarousel();
-                });
-            });
-
-            function updateCarousel() {
-                const offset = -currentIndex * 100;
-                $('.carousel-track').css('transform', `translateX(${offset}%)`);
-
-                // Update indicators
+                // Set active class on the middle slide initially
+                slides.removeClass('active');
+                slides.eq(currentIndex).addClass('active');
                 indicators.removeClass('active');
                 indicators.eq(currentIndex).addClass('active');
-            }
 
-            // Auto-slide
-            setInterval(function () {
-                currentIndex = (currentIndex + 1) % totalSlides;
+                // Initial setup
                 updateCarousel();
-            }, 5000);
 
-            // Glimpse of MISP2022 Carousel
-            let glimpseCurrentIndex = 2; // Start with middle slide active
-            const glimpseSlides = $('.glimpse-slide');
-            const glimpseTotalSlides = glimpseSlides.length;
-            const glimpseIndicators = $('.glimpse-indicator');
-
-            // Set active class on the middle slide initially
-            glimpseSlides.removeClass('active');
-            glimpseSlides.eq(glimpseCurrentIndex).addClass('active');
-
-            // Initial setup
-            updateGlimpseCarousel();
-
-            // Next button
-            $('.glimpse-button.next').click(function () {
-                glimpseCurrentIndex = (glimpseCurrentIndex + 1) % glimpseTotalSlides;
-                updateGlimpseCarousel();
-            });
-
-            // Previous button
-            $('.glimpse-button.prev').click(function () {
-                glimpseCurrentIndex = (glimpseCurrentIndex - 1 + glimpseTotalSlides) % glimpseTotalSlides;
-                updateGlimpseCarousel();
-            });
-
-            // Indicator buttons
-            glimpseIndicators.each(function (index) {
-                $(this).click(function () {
-                    glimpseCurrentIndex = index;
-                    updateGlimpseCarousel();
-                });
-            });
-
-            function updateGlimpseCarousel() {
-                // Calculate the center position - this is key to making the active slide centered
-                const centerPosition = (glimpseTotalSlides - 1) / 2;
-                const difference = glimpseCurrentIndex - centerPosition;
-
-                // Reposition all slides for circular effect
-                glimpseSlides.each(function (index) {
-                    const newPosition = (index - difference + glimpseTotalSlides) % glimpseTotalSlides;
-                    $(this).css('order', newPosition);
+                // Indicator buttons for this carousel
+                indicators.each(function (index) {
+                    $(this).click(function () {
+                        currentIndex = index;
+                        updateCarousel();
+                    });
                 });
 
-                // Remove active class from all slides
-                glimpseSlides.removeClass('active');
+                // Auto rotation for this carousel
+                setInterval(function () {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateCarousel();
+                }, autoRotateInterval);
 
-                // Add active class to the current slide
-                glimpseSlides.eq(glimpseCurrentIndex).addClass('active');
+                function updateCarousel() {
+                    // Calculate the center position
+                    const centerPosition = Math.floor((totalSlides - 1) / 2);
+                    const difference = currentIndex - centerPosition;
 
-                // Update indicators
-                glimpseIndicators.removeClass('active');
-                glimpseIndicators.eq(glimpseCurrentIndex).addClass('active');
-            }
+                    // Reposition all slides for circular effect
+                    slides.each(function (index) {
+                        const newPosition = (index - difference + totalSlides) % totalSlides;
+                        $(this).css('order', newPosition);
+                    });
 
-            // Auto rotation
-            setInterval(function () {
-                glimpseCurrentIndex = (glimpseCurrentIndex + 1) % glimpseTotalSlides;
-                updateGlimpseCarousel();
-            }, 3000);
+                    // Remove active class from all slides
+                    slides.removeClass('active');
 
-            // News Clips Carousel
-            let newsCurrentIndex = 2; // Start with middle slide active
-            const newsSlides = $('.news-clip-slide');
-            const newsTotalSlides = newsSlides.length;
-            const newsIndicators = $('.news-clips-indicator');
+                    // Add active class to the current slide
+                    slides.eq(currentIndex).addClass('active');
 
-            // Set active class on the middle slide initially
-            newsSlides.removeClass('active');
-            newsSlides.eq(newsCurrentIndex).addClass('active');
-
-            // Initial setup
-            updateNewsCarousel();
-
-            // Next button
-            $('.news-clips-button.next').click(function () {
-                newsCurrentIndex = (newsCurrentIndex + 1) % newsTotalSlides;
-                updateNewsCarousel();
-            });
-
-            // Previous button
-            $('.news-clips-button.prev').click(function () {
-                newsCurrentIndex = (newsCurrentIndex - 1 + newsTotalSlides) % newsTotalSlides;
-                updateNewsCarousel();
-            });
-
-            // Indicator buttons
-            newsIndicators.each(function (index) {
-                $(this).click(function () {
-                    newsCurrentIndex = index;
-                    updateNewsCarousel();
-                });
-            });
-
-            function updateNewsCarousel() {
-                // Calculate the center position
-                const centerPosition = (newsTotalSlides - 1) / 2;
-                const difference = newsCurrentIndex - centerPosition;
-
-                // Reposition all slides for circular effect
-                newsSlides.each(function (index) {
-                    const newPosition = (index - difference + newsTotalSlides) % newsTotalSlides;
-                    $(this).css('order', newPosition);
-                });
-
-                // Remove active class from all slides
-                newsSlides.removeClass('active');
-
-                // Add active class to the current slide
-                newsSlides.eq(newsCurrentIndex).addClass('active');
-
-                // Update indicators
-                newsIndicators.removeClass('active');
-                newsIndicators.eq(newsCurrentIndex).addClass('active');
-            }
-
-            // Auto rotation
-            setInterval(function () {
-                newsCurrentIndex = (newsCurrentIndex + 1) % newsTotalSlides;
-                updateNewsCarousel();
-            }, 4000);
-        });
-
-        // Campus Carousel
-        $(document).ready(function () {
-            let campusCurrentIndex = 2; // Start with middle slide active
-            const campusSlides = $('.campus-slide');
-            const campusTotalSlides = campusSlides.length;
-            const campusIndicators = $('.campus-indicator');
-
-            // Set active class on the middle slide initially
-            campusSlides.removeClass('active');
-            campusSlides.eq(campusCurrentIndex).addClass('active');
-            campusIndicators.eq(campusCurrentIndex).addClass('active');
-
-            // Initial setup
-            updateCampusCarousel();
-
-            // Next button
-            $('.campus-button.next').click(function () {
-                campusCurrentIndex = (campusCurrentIndex + 1) % campusTotalSlides;
-                updateCampusCarousel();
-            });
-
-            // Previous button
-            $('.campus-button.prev').click(function () {
-                campusCurrentIndex = (campusCurrentIndex - 1 + campusTotalSlides) % campusTotalSlides;
-                updateCampusCarousel();
-            });
-
-            // Indicator buttons
-            campusIndicators.each(function (index) {
-                $(this).click(function () {
-                    campusCurrentIndex = index;
-                    updateCampusCarousel();
-                });
-            });
-
-            function updateCampusCarousel() {
-                // Calculate the center position
-                const centerPosition = (campusTotalSlides - 1) / 2;
-                const difference = campusCurrentIndex - centerPosition;
-
-                // Reposition all slides for circular effect
-                campusSlides.each(function (index) {
-                    const newPosition = (index - difference + campusTotalSlides) % campusTotalSlides;
-                    $(this).css('order', newPosition);
-                });
-
-                // Remove active class from all slides
-                campusSlides.removeClass('active');
-
-                // Add active class to the current slide
-                campusSlides.eq(campusCurrentIndex).addClass('active');
-
-                // Update indicators
-                campusIndicators.removeClass('active');
-                campusIndicators.eq(campusCurrentIndex).addClass('active');
-            }
-
-            // Auto rotation
-            setInterval(function () {
-                campusCurrentIndex = (campusCurrentIndex + 1) % campusTotalSlides;
-                updateCampusCarousel();
-            }, 3500);
-        });
-
-        // Copy to clipboard functionality using jQuery
-        $(document).on('click', '.copy-btn', function () {
-            const text = $(this).attr('data-copy');
-            const $btn = $(this);
-
-            // Remove any existing tooltips
-            $('.tooltip').remove();
-
-            // Create tooltip element and position it relative to the button
-            const $tooltip = $('<div class="tooltip">Copied!</div>');
-            $btn.parent().append($tooltip);
-
-            // Position absolute needs a positioned parent
-            $btn.parent().css('position', 'relative');
-
-            navigator.clipboard.writeText(text).then(function () {
-                // Add success animation to button
-                $btn.addClass('copy-success');
-
-                // Show tooltip with a slight delay for animation
-                setTimeout(function () {
-                    $tooltip.addClass('show');
-                }, 10);
-
-                // Remove tooltip after delay
-                setTimeout(function () {
-                    $tooltip.removeClass('show');
-                    setTimeout(function () {
-                        $tooltip.remove();
-                    }, 300);
-                }, 1000);
-
-                // Remove animation class from button
-                setTimeout(function () {
-                    $btn.removeClass('copy-success');
-                }, 500);
-            }).catch(function (err) {
-                console.error('Failed to copy:', err);
-
-                // Fallback for browsers without clipboard API
-                const $textArea = $('<textarea>').val(text).css('position', 'fixed');
-                $('body').append($textArea);
-                $textArea.focus().select();
-
-                try {
-                    document.execCommand('copy');
-                    $tooltip.text('Copied!').addClass('show');
-
-                    setTimeout(function () {
-                        $tooltip.removeClass('show');
-                        setTimeout(function () {
-                            $tooltip.remove();
-                        }, 300);
-                    }, 1000);
-                } catch (err) {
-                    console.error('Fallback: Unable to copy', err);
-                    $tooltip.text('Copy failed').addClass('show');
-
-                    setTimeout(function () {
-                        $tooltip.removeClass('show');
-                        setTimeout(function () {
-                            $tooltip.remove();
-                        }, 300);
-                    }, 1000);
+                    // Update indicators
+                    indicators.removeClass('active');
+                    indicators.eq(currentIndex).addClass('active');
                 }
+            }
 
-                $textArea.remove();
+            // Copy to clipboard functionality using jQuery
+            $('.copy-btn').click(function (e) {
+                e.preventDefault();
+                const copyText = $(this).data('copy');
+                const tempInput = $('<input>');
+                $('body').append(tempInput);
+                tempInput.val(copyText).select();
+                document.execCommand('copy');
+                tempInput.remove();
+
+                // Show the tooltip
+                $(this).attr('data-tooltip', 'Copied!');
+                setTimeout(() => {
+                    $(this).attr('data-tooltip', 'Copy');
+                }, 2000);
             });
-
-            // Prevent the onclick attribute from firing
-            return false;
         });
     </script>
 

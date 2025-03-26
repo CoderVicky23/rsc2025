@@ -1388,7 +1388,7 @@ footer h3::after {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 .glimpse-carousel-track {
@@ -1402,7 +1402,6 @@ footer h3::after {
 .glimpse-slide {
     flex: 0 0 20%;
     padding: 0 15px;
-    height: fit-content;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     opacity: 0.5;
     transform: scale(0.7);
@@ -1420,9 +1419,54 @@ footer h3::after {
     z-index: 2;
 }
 
+@media (max-width: 1200px) {
+    .glimpse-slide {
+        flex: 0 0 25%;
+    }
+    .glimpse-slide.active {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 991px) {
+    .glimpse-slide {
+        flex: 0 0 33.333%;
+    }
+    .glimpse-slide.active {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 768px) {
+    .glimpse-slide {
+        flex: 0 0 50%;
+        padding: 0 10px;
+    }
+    .glimpse-slide.active {
+        transform: scale(1.1);
+    }
+    .glimpse-indicators {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glimpse-slide {
+        flex: 0 0 70%;
+        padding: 0 5px;
+    }
+    .glimpse-slide.active {
+        transform: scale(1.05);
+    }
+    .glimpse-carousel, .news-clips-carousel, .campus-carousel {
+        padding: 20px 0;
+    }
+}
+
 .glimpse-image {
-    height: 100%;
-    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -1452,7 +1496,6 @@ footer h3::after {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     color: var(--primary-color);
 }
@@ -1530,56 +1573,11 @@ footer h3::after {
     z-index: 2;
 }
 
-.news-clip-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 3px solid transparent;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
 
 .news-clip-slide.active .news-clip-image {
     box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
     border: 3px solid var(--secondary-color);
     transform: translateZ(20px);
-}
-
-.news-clips-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    color: var(--primary-color);
-}
-
-.news-clips-button:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.news-clips-button.prev {
-    left: 20px;
-}
-
-.news-clips-button.next {
-    right: 20px;
 }
 
 .news-clips-indicators {
@@ -1603,6 +1601,47 @@ footer h3::after {
     background: var(--secondary-color);
     transform: scale(1.2);
     box-shadow: 0 0 0 2px rgba(244, 169, 80, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .news-clip-slide {
+        flex: 0 0 25%;
+    }
+    .news-clip-slide.active {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 991px) {
+    .news-clip-slide {
+        flex: 0 0 33.333%;
+    }
+    .news-clip-slide.active {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-clip-slide {
+        flex: 0 0 50%;
+        padding: 0 10px;
+    }
+    .news-clip-slide.active {
+        transform: scale(1.1);
+    }
+    .news-clips-indicators {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-clip-slide {
+        flex: 0 0 70%;
+        padding: 0 5px;
+    }
+    .news-clip-slide.active {
+        transform: scale(1.05);
+    }
 }
 
 /* Campus Carousel Styles */
@@ -1642,6 +1681,47 @@ footer h3::after {
     z-index: 2;
 }
 
+@media (max-width: 1200px) {
+    .campus-slide {
+        flex: 0 0 25%;
+    }
+    .campus-slide.active {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 991px) {
+    .campus-slide {
+        flex: 0 0 33.333%;
+    }
+    .campus-slide.active {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 768px) {
+    .campus-slide {
+        flex: 0 0 50%;
+        padding: 0 10px;
+    }
+    .campus-slide.active {
+        transform: scale(1.1);
+    }
+    .campus-indicators {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campus-slide {
+        flex: 0 0 70%;
+        padding: 0 5px;
+    }
+    .campus-slide.active {
+        transform: scale(1.05);
+    }
+}
+
 .campus-image {
     width: 100%;
     height: auto;
@@ -1675,7 +1755,6 @@ footer h3::after {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     color: var(--primary-color);
 }
@@ -1739,27 +1818,21 @@ footer h3::after {
         flex: 0 0 50%;
     }
     
-    .glimpse-carousel, .news-clips-carousel, .campus-carousel {
-        padding: 40px 0;
+    /* Ensure indicator buttons are more visible on mobile */
+    .glimpse-indicator, .news-clips-indicator, .campus-indicator {
+        width: 10px;
+        height: 10px;
     }
     
-    .glimpse-button, .news-clips-button, .campus-button {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .glimpse-button.prev, .news-clips-button.prev, .campus-button.prev {
-        left: 10px;
-    }
-    
-    .glimpse-button.next, .news-clips-button.next, .campus-button.next {
-        right: 10px;
+    /* Add spacing between indicators */
+    .glimpse-indicators, .news-clips-indicators, .campus-indicators {
+        gap: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .glimpse-slide, .news-clip-slide, .campus-slide {
-        flex: 0 0 80%;
+        flex: 0 0 70%;
     }
     
     .glimpse-slide.active, .news-clip-slide.active, .campus-slide.active {
