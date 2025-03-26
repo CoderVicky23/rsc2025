@@ -170,8 +170,9 @@
                         </h1>
                         <div class="w-20 h-1 bg-secondary mb-6"></div>
                         <p class="text-lg mb-3">Organized by National Institute of Technology Raipur</p>
-                        <div class="mb-6 mt-4 inline-block px-4 py-2 bg-primary/80 rounded-lg border border-white/10">
-                            <p class="text-lg md:text-xl lg:text-2xl font-semibold flex items-center">
+                        <div
+                            class="mb-4 mt-4 md:mb-6 inline-block px-4 py-2 bg-primary/80 rounded-lg border border-white/10">
+                            <p class="text-sm md:text-xl lg:text-2xl font-semibold flex items-center">
                                 <i class="fas fa-lightbulb mr-2 text-secondary"></i>
                                 Theme: Sustainable Technology
                             </p>
@@ -206,13 +207,14 @@
                 <!-- Image Carousel Column -->
                 <div class="order-1 lg:order-2 flex justify-center mt-4 md:mt-0" data-aos="fade-left">
                     <!-- Carousel Container -->
-                    <div class="relative w-full h-full overflow-hidden rounded-lg shadow-2xl border-4 border-white/30">
+                    <div class="relative w-full overflow-hidden rounded-lg shadow-2xl border-4 border-white/30"
+                        style="min-height: 300px;">
                         <!-- Images -->
                         <img src="./images/campus/nitrr_main_building_3.jpg" alt="NIT Raipur Campus 1"
-                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-800 opacity-100"
                             id="carousel-img1">
                         <img src="./images/campus/nitrr_main_building_5.jpg" alt="NIT Raipur Campus 2"
-                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-800 opacity-0"
                             id="carousel-img2">
                         <!-- <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus 3"
                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
@@ -228,8 +230,7 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const images = [
                     document.getElementById('carousel-img1'),
-                    document.getElementById('carousel-img2'),
-                    document.getElementById('carousel-img3')
+                    document.getElementById('carousel-img2')
                 ];
 
                 let currentIndex = 0;
@@ -262,7 +263,7 @@
                 <div class="section-divider"></div>
             </div>
 
-            <p class="text-center mb-8">
+            <p class="text-center mb-8" data-aos="fade-up">
                 A proud glimpse into the grand success of Research Scholars Conclave 2024 — a remarkable gathering
                 of brilliant minds, thought-provoking discussions, and groundbreaking research. The event stood as a
                 true celebration of knowledge, innovation, and academic excellence, leaving behind memories of
@@ -323,7 +324,7 @@
                 <div class="section-divider"></div>
             </div>
 
-            <p class="text-center mb-8">
+            <p class="text-center mb-8" data-aos="fade-up">
                 The Research Scholars Conclave 2024 witnessed enthusiastic participation from scholars and academicians,
                 featuring insightful discussions, innovative research presentations, and impactful knowledge exchange —
                 marking the event as a grand success in fostering academic excellence and research collaboration.
@@ -787,13 +788,15 @@
             <div class="section-divider w-16 h-1 bg-secondary mx-auto"></div>
         </div>
         <div class="container mx-auto px-4">
-            <h4 class="text-xl font-semibold text-secondary mb-4">How to submit the ManuScript</h4>
-            <ul class="list-disc list-inside  mb-6">
+            <h4 class="text-xl font-semibold text-secondary mb-4" data-aos="fade-right">How to submit the ManuScript
+            </h4>
+            <ul class="list-disc list-inside  mb-6" data-aos="fade-right">
                 <li>Login to your RSC2025 MicroSoft CMT Account ➤ Submission ➤ Information ➤ Update File (Right Corner)
                 </li>
             </ul>
-            <h4 class="text-xl font-semibold text-secondary mb-4">Guidelines for Preparing ManuScript</h4>
-            <ul class="list-disc list-inside  mb-6">
+            <h4 class="text-xl font-semibold text-secondary mb-4" data-aos="fade-left">Guidelines for Preparing
+                ManuScript</h4>
+            <ul class="list-disc list-inside  mb-6" data-aos="fade-left">
                 <li>Original manuscript should be strictly structured in preferably up to 8-12 pages and formatted using
                     Springer’s styles (available on MISP2022 Website)</li>
                 <li>Total similarity score (plagiarism %) must be less than or equal to 20%. Plagiarism % from a single
@@ -808,9 +811,10 @@
                     be marked with * and Email id of all the authors must be provided.</li>
                 <li>All the equations must be written in the equation editor (in Math type / Microsoft 3.0).</li>
             </ul>
-            <h4 class="text-xl font-semibold text-secondary mb-4">After a double-blind peer review, qualifying Regular
+            <h4 class="text-xl font-semibold text-secondary mb-4" data-aos="fade-right">After a double-blind peer
+                review, qualifying Regular
                 Papers may be accepted as either Full Papers or Short Papers.</h4>
-            <ul class="list-disc list-inside ">
+            <ul class="list-disc list-inside" data-aos="fade-right">
                 <li>As per policy, RSC2025 proceedings contain original research that has neither been published nor
                     submitted for publication elsewhere. It is necessary that neither plagiarism nor self-plagiarism has
                     taken place. It is possible that your manuscript will be run through the plagiarism-checking tool,
@@ -1043,7 +1047,7 @@
                 </h3>
                 <div class="section-divider"></div>
 
-                <div class="mx-auto px-4">
+                <div class="mx-auto px-4" data-aos="fade-up">
                     <ul class="list-disc list-inside space-y-4 md:columns-2 lg:columns-3 mb-8 text-xl">
                         <li class="text-primary-dark">Dr. Rohit Kumar Giri</li>
                         <li class="text-primary-dark">Mr. Sachin Kumar Sahu</li>
@@ -1077,7 +1081,7 @@
             </div>
 
             <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                <div class="lg:flex-1 bg-white p-6 rounded-lg shadow-lg">
+                <div class="lg:flex-1 bg-white p-6 rounded-lg shadow-lg" data-aos="fade-right">
                     <h3 class="text-black text-lg lg:text-2lg font-bold mb-4 pb-2 border-b border-orange-400">
                         International Advisory Committee</h3>
                     <ul class="list-disc pl-5 space-y-3">
@@ -1094,7 +1098,7 @@
                     </ul>
                 </div>
 
-                <div class="lg:flex-1 bg-white p-6 rounded-lg shadow-lg">
+                <div class="lg:flex-1 bg-white p-6 rounded-lg shadow-lg" data-aos="fade-left">
                     <h3 class="text-black text-lg lg:text-2lg font-bold mb-4 pb-2 border-b border-orange-400">National
                         Advisory Committee</h3>
                     <ul class="list-disc pl-5 space-y-3">
@@ -1127,7 +1131,7 @@
                 <h2 class="section-title" data-aos="fade-up">Technical Program Committee</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="tech-comm-content">
+            <div class="tech-comm-content" data-aos="fade-up">
                 <ul
                     class="list-disc pl-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
                     <li class="marker:text-orange-400 text-base lg:text-lg">Dr. Vijay Pal Rathor, Assistant Professor
@@ -1196,10 +1200,10 @@
                 <div class="section-divider"></div>
             </div>
 
-            <!-- Venue information (full width) -->
+            <!-- Venue information-->
             <div class="text-center mb-12">
-                <!-- <h3 class="text-2xl font-bold text-secondary mb-4">National Institute of Technology Raipur</h3> -->
-                <p class="txt-justify mb-4">National Institute of Technology Raipur (Formerly Government Engineering
+                <p class="txt-justify mb-4" data-aos="fade-up">National Institute of Technology Raipur (Formerly
+                    Government Engineering
                     College
                     Raipur) spared over an area of 100 acres and located in Raipur, the Capital City of Chhattisgarh
                     State. Raipur city is well connected with Mumbai, Delhi, Chennai, Visakhapatnam, Nagpur &amp;
@@ -1212,7 +1216,8 @@
                     institute has become the National Institute of Technology.
                 </p>
 
-                <p class="txt-justify mb-4">Presently NIT Raipur offers 12 undergraduate, 11 Postgraduate (including
+                <p class="txt-justify mb-4" data-aos="fade-up">Presently NIT Raipur offers 12 undergraduate, 11
+                    Postgraduate (including
                     M.C.A
                     and M.Tech. in Applied Geology) and 18 Ph.D programs. The institute offers facilities for Ph.D. and
                     also under takes R &amp; D activities, provides testing, consultancy and other extension services
@@ -1223,23 +1228,22 @@
                 </p>
             </div>
 
-            <!-- Campus Images Carousel -->
+            <!-- Nit Raipur Images Carousel -->
             <div class="campus-carousel" data-aos="fade-up">
                 <div class="campus-carousel-track">
-                    <div class="campus-slide" data-index="0" data-aos="fade-up">
-                        <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus" class="campus-image">
-                    </div>
-                    <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./images/campus/nitrr_main_building.png" alt="NIT Raipur Building"
-                            class="campus-image">
-                    </div>
-                    <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./images/campus/nitrr_ccc.png" alt="Computer Center" class="campus-image">
-                    </div>
-                    <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="campus-slide" data-index="0" data-aos="fade-up" data-aos-delay="300">
                         <img src="./images/campus/nitrr_library.png" alt="Library" class="campus-image">
                     </div>
-                    <div class="campus-slide" data-index="4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./images/campus/nitrr_campus_2.png" alt="Computer Center" class="campus-image">
+                    </div>
+                    <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./images/campus/nitrr_main_gate.jpg" alt="NIT Raipur Campus" class="campus-image">
+                    </div>
+                    <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="400">
+                        <img src="./images/campus/nitrr_main_building_3.jpg" alt="NIT Raipur Campus" class="campus-image">
+                    </div>
+                    <div class="campus-slide" data-index="4" data-aos="fade-up">
                         <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus" class="campus-image">
                     </div>
                 </div>
@@ -1270,10 +1274,8 @@
                 <div class="section-divider"></div>
             </div>
 
-            <!-- Venue information (full width) -->
             <div class="text-center mb-12">
-                <!-- <h3 class="text-2xl font-bold text-secondary mb-4">National Institute of Technology Raipur</h3> -->
-                <p class="mb-4 text-black txt-justify">
+                <p class="mb-4 text-black txt-justify" data-aos="fade-up">
                     Raipur is the capital city of Chhattisgarh state in central India. The city is located centrally in
                     the state of Chhattisgar. Raipur's economy has been based on agricultural-processing and
                     saw-milling, and now serves as a regional hub for trade and commerce for a variety of local
@@ -1285,28 +1287,28 @@
                 </p>
             </div>
 
-            <!-- Campus Images Carousel -->
+            <!-- Raipur Images Carousel -->
             <div class="campus-carousel" data-aos="fade-up">
                 <div class="campus-carousel-track">
                     <div class="campus-slide" data-index="0" data-aos="fade-up">
                         <img src="./images/raipur/ambuja-city-center-mall.jpg" alt="ambuja" class="campus-image">
-                        <h1 class="text-center text-primary">Ambuja Mall</h1>
+                        <h1 class="text-center text-secondary mt-1">Ambuja Mall</h1>
                     </div>
                     <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="100">
                         <img src="./images/raipur/inside-entry-of-muktangan.jpg" alt="muktangan" class="campus-image">
-                        <h1 class="text-center text-primary">Muktangan</h1>
+                        <h1 class="text-center text-secondary mt-1">Muktangan</h1>
                     </div>
                     <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="200">
                         <img src="./images/raipur/kevalya_dham_jain_temple.jpg" alt="kevalya" class="campus-image">
-                        <h1 class="text-center text-primary">Kevalya Temple</h1>
+                        <h1 class="text-center text-secondary mt-1">Kevalya Temple</h1>
                     </div>
                     <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="300">
                         <img src="./images/raipur/marine_drive.jpg" alt="marine" class="campus-image">
-                        <h1 class="text-center text-primary">Marine Drive</h1>
+                        <h1 class="text-center text-secondary mt-1">Marine Drive</h1>
                     </div>
                     <div class="campus-slide" data-index="4" data-aos="fade-up" data-aos-delay="400">
                         <img src="./images/raipur/naya_raipur.jpg" alt="naya raipur" class="campus-image">
-                        <h1 class="text-center text-primary">Naya Raipur</h1>
+                        <h1 class="text-center text-secondary mt-1">Naya Raipur</h1>
                     </div>
                 </div>
 
@@ -1336,10 +1338,9 @@
                 <div class="section-divider"></div>
             </div>
 
-            <!-- Venue information (full width) -->
             <div class="text-center mb-12">
-                <!-- <h3 class="text-2xl font-bold text-secondary mb-4">National Institute of Technology Raipur</h3> -->
-                <p class="txt-justify mb-4">Chhattisgarh is a heavily forested state known for its temples and
+                <p class="txt-justify mb-4" data-aos="fade-up">
+                    Chhattisgarh is a heavily forested state known for its temples and
                     waterfalls.
                     Situated in the heart of India with a ten thousand years old civilization it is a land ‘Full of
                     Surprises’ that attracts tourists who look forward to experience the pristine.
@@ -1359,38 +1360,30 @@
                     Chhattisgarh figures in numerous tales that form part of the two great Indian epics, the Ramayana
                     and the Mahabharata.
                 </p>
-                <!-- <div class="venue-address mt-6">
-                    <h4 class="font-bold text-gray-800 mb-2">Address:</h4>
-                    <p class="text-gray-700">
-                        National Institute of Technology Raipur<br>
-                        G.E. Road, Raipur<br>
-                        Chhattisgarh - 492010, India
-                    </p>
-                </div> -->
             </div>
 
-            <!-- Campus Images Carousel -->
+            <!-- Chattisgarh Images Carousel -->
             <div class="campus-carousel">
                 <div class="campus-carousel-track">
                     <div class="campus-slide" data-index="0" data-aos="fade-up">
                         <img src="./images/chattisgarh/10.jpg" alt="10" class="campus-image">
-                        <h1 class="text-center text-secondary">Mahant Ghasidas Sangrahalay</h1>
+                        <h1 class="text-center text-secondary mt-1">Mahant Ghasidas Sangrahalay</h1>
                     </div>
                     <div class="campus-slide" data-index="1" data-aos="fade-up" data-aos-delay="100">
                         <img src="./images/chattisgarh/15.jpg" alt="15" class="campus-image">
-                        <h1 class="text-center text-secondary">Jogimara</h1>
+                        <h1 class="text-center text-secondary mt-1">Jogimara</h1>
                     </div>
                     <div class="campus-slide" data-index="2" data-aos="fade-up" data-aos-delay="200">
                         <img src="./images/chattisgarh/22.jpg" alt="22" class="campus-image">
-                        <h1 class="text-center text-secondary">Kanger Valley National Park</h1>
+                        <h1 class="text-center text-secondary mt-1">Kanger Valley National Park</h1>
                     </div>
                     <div class="campus-slide" data-index="3" data-aos="fade-up" data-aos-delay="300">
                         <img src="./images/chattisgarh/3.jpg" alt="3" class="campus-image">
-                        <h1 class="text-center text-secondary">Bhoramdeo Temple</h1>
+                        <h1 class="text-center text-secondary mt-1">Bhoramdeo Temple</h1>
                     </div>
                     <div class="campus-slide" data-index="4" data-aos="fade-up" data-aos-delay="400">
                         <img src="./images/chattisgarh/4.jpg" alt="4" class="campus-image">
-                        <h1 class="text-center text-secondary">Laxman Temple</h1>
+                        <h1 class="text-center text-secondary mt-1">Laxman Temple</h1>
                     </div>
                 </div>
 
@@ -1417,7 +1410,7 @@
         <div class="container mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Column 1: Site  -->
-                <div>
+                <div data-aos="fade-right">
                     <h1 class="text-2xl md:text-2xl font-bold mb-4 text-center">Research Conclave 2025</h1>
                     <div class="mb-4 flex justify-center items-center">
                         <img src="./images/nitrr_logo.png" alt="NIT Raipur Logo" class="h-40 mx-auto">
@@ -1425,7 +1418,7 @@
                 </div>
 
                 <!-- Column 2: Important Links -->
-                <div>
+                <div data-aos="fade-right">
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
@@ -1438,7 +1431,7 @@
                 </div>
 
                 <!-- Column 3: Related Links -->
-                <div>
+                <div data-aos="fade-left">
                     <h3 class="text-xl font-bold mb-4">Related Links</h3>
                     <ul class="footer-links">
                         <li><a href="https://www.nitrr.ac.in/" target="_blank">NIT Raipur</a></li>
@@ -1448,7 +1441,7 @@
                 </div>
 
                 <!-- Column 4: Contact Us -->
-                <div>
+                <div data-aos="fade-left">
                     <h3 class="text-xl font-bold mb-4">Contact Us</h3>
                     <div class="flex items-start mb-3">
                         <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
@@ -1465,15 +1458,17 @@
                     </div> -->
                     <div class="social-icons flex mt-4">
                         <a href="https://www.linkedin.com/school/national-institute-of-technology-raipur/posts/?feedView=all"
-                            target="_blank" class="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/nitrr.raipur/" target="_blank" class=""
-                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/nit_raipur/" target="_blank" class=""
-                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/NITRR" target="_blank" class="" aria-label="Twitter"><i
-                                class="fab fa-twitter"></i></a>
+                            target="_blank" aria-label="LinkedIn" data-aos="zoom-in" data-aos-delay="800"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/nitrr.raipur/" target="_blank" aria-label="Facebook"
+                            data-aos="zoom-in" data-aos-delay="900"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nit_raipur/" target="_blank" aria-label="Instagram"
+                            data-aos="zoom-in" data-aos-delay="1000"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/NITRR" target="_blank" aria-label="Twitter" data-aos="zoom-in"
+                            data-aos-delay="1100"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank" class=""
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            aria-label="YouTube" data-aos="zoom-in" data-aos-delay="1200"><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
