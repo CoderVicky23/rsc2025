@@ -1388,7 +1388,7 @@ footer h3::after {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .glimpse-carousel-track {
@@ -1542,7 +1542,7 @@ footer h3::after {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 .news-clips-track {
@@ -1572,7 +1572,6 @@ footer h3::after {
     filter: blur(0);
     z-index: 2;
 }
-
 
 .news-clip-slide.active .news-clip-image {
     box-shadow: 0 10px 30px rgba(17, 43, 82, 0.25);
