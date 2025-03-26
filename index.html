@@ -203,25 +203,71 @@
                     </div>
                 </div>
 
-                <!-- Image Column -->
+                <!-- Image Carousel Column -->
                 <div class="order-1 lg:order-2 flex justify-center mt-4 md:mt-0" data-aos="fade-left">
-                    <div class="relative">
-                        <img src="./images/campus/nitrr_main_building_3.jpg" alt="NIT Raipur Campus"
-                            class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-white/30 z-10 relative h-full">
-                        <div class="absolute -bottom-4 -right-4 w-full h-full bg-gray-50/20 rounded-lg"></div>
+                    <!-- Carousel Container -->
+                    <div class="relative w-full h-full overflow-hidden rounded-lg shadow-2xl border-4 border-white/30">
+                        <!-- Images -->
+                        <img src="./images/campus/nitrr_main_building_3.jpg" alt="NIT Raipur Campus 1"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+                            id="carousel-img1">
+                        <img src="./images/campus/nitrr_main_building_5.jpg" alt="NIT Raipur Campus 2"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                            id="carousel-img2">
+                        <!-- <img src="./images/campus/nitrr_campus.png" alt="NIT Raipur Campus 3"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                            id="carousel-img3"> -->
                     </div>
+                    <div class="absolute -bottom-4 -right-4 w-full h-full bg-gray-50/20 rounded-lg -z-10"></div>
                 </div>
             </div>
         </div>
+
+        <!-- JavaScript for home image Carousel -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const images = [
+                    document.getElementById('carousel-img1'),
+                    document.getElementById('carousel-img2'),
+                    document.getElementById('carousel-img3')
+                ];
+
+                let currentIndex = 0;
+
+                function rotateImages() {
+                    // Hide all images
+                    images.forEach(img => img.classList.add('opacity-0'));
+
+                    // Show current image
+                    images[currentIndex].classList.remove('opacity-0');
+
+                    // Move to next image
+                    currentIndex = (currentIndex + 1) % images.length;
+
+                    // Repeat every 1 second
+                    setTimeout(rotateImages, 2000);
+                }
+
+                // Start the rotation
+                rotateImages();
+            });
+        </script>
     </section>
 
     <!-- Glimpse of Previous Conclaves Section -->
     <section id="glimpse-conclaves" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-title" data-aos="fade-up">Glimpse of RSC2024</h2>
+                <h2 class="section-title" data-aos="fade-up">Glimpse of Research Scholar’s Conclave 2024</h2>
                 <div class="section-divider"></div>
             </div>
+
+            <p class="text-center mb-8">
+                A proud glimpse into the grand success of Research Scholars Conclave 2024 — a remarkable gathering
+                of brilliant minds, thought-provoking discussions, and groundbreaking research. The event stood as a
+                true celebration of knowledge, innovation, and academic excellence, leaving behind memories of
+                inspiring sessions, collaborative exchanges, and the spirit of scholarly pursuit.
+            </p>
 
             <div class="glimpse-carousel" data-aos="fade-up">
                 <div class="glimpse-carousel-track">
@@ -273,9 +319,15 @@
     <section id="news-clips" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-title" data-aos="fade-up">RSC2024 in NEWS</h2>
+                <h2 class="section-title" data-aos="fade-up">Research Scholar’s Conclave 2024 in NEWS</h2>
                 <div class="section-divider"></div>
             </div>
+
+            <p class="text-center mb-8">
+                The Research Scholars Conclave 2024 witnessed enthusiastic participation from scholars and academicians,
+                featuring insightful discussions, innovative research presentations, and impactful knowledge exchange —
+                marking the event as a grand success in fostering academic excellence and research collaboration.
+            </p>
 
             <div class="news-clips-carousel" data-aos="fade-up">
                 <div class="news-clips-track">
@@ -450,21 +502,21 @@
                 <h2 class="section-title" data-aos="fade-up">Research Tracks</h2>
                 <div class="section-divider"></div>
                 <p class="text-gray-600 max-w-3xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="100">
-                    The conclave features 10 diverse tracks integrating multiple disciplines under the theme of
-                    "Sustainable Technology".
+                    The conclave features 5 diverse tracks integrating multiple disciplines under the theme of
+                    "Sustainable Technology (but not limited to)".
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex flex-wrap justify-center gap-6">
                 <!-- Track 1 -->
-                <div class="track-card" data-aos="fade-up">
+                <div class="track-card basis-full md:basis-[45%] lg:basis-[30%] min-w-0" data-aos="fade-up">
                     <div class="track-number">1</div>
                     <h3 class="text-xl font-bold text-primary-dark mb-2">Sustainable solutions for Resource, Energy and
                         Infrastructure Management</h3>
                     <p class="text-gray-600 mb-4">Research on innovative approaches to manage resources, energy, and
                         infrastructure sustainably.</p>
 
-                    <div class="subtracks-list">
+                    <div class="subtracks-list h-full">
                         <h4 class="text-base font-semibold text-gray-700 mb-2">Topics:</h4>
                         <ul class="text-sm text-gray-600 space-y-1 pl-5">
                             <li>Renewable Energy Resources and Sustainable Technologies</li>
@@ -496,7 +548,8 @@
                 </div>
 
                 <!-- Track 2 -->
-                <div class="track-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="track-card basis-full md:basis-[45%] lg:basis-[30%] min-w-0" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="track-number">2</div>
                     <h3 class="text-xl font-bold text-primary-dark mb-2">Advanced Sustainable Materials, Product
                         Development, and Environmental Solutions</h3>
@@ -540,7 +593,8 @@
                 </div>
 
                 <!-- Track 3 -->
-                <div class="track-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="track-card basis-full md:basis-[45%] lg:basis-[30%] min-w-0" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="track-number">3</div>
                     <h3 class="text-xl font-bold text-primary-dark mb-2">Computational Intelligence and Smart
                         Technologies for Sustainable Development</h3>
@@ -584,7 +638,7 @@
                 </div>
 
                 <!-- Track 4 -->
-                <div class="track-card" data-aos="fade-up">
+                <div class="track-card basis-full md:basis-[45%] lg:basis-[30%] min-w-0" data-aos="fade-up">
                     <div class="track-number">4</div>
                     <h3 class="text-xl font-bold text-primary-dark mb-2">Life Sciences and Health Sustainability</h3>
                     <p class="text-gray-600 mb-4">Research on advancing life sciences to promote sustainable healthcare
@@ -624,7 +678,8 @@
                 </div>
 
                 <!-- Track 5 -->
-                <div class="track-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="track-card basis-full md:basis-[45%] lg:basis-[30%] min-w-0" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="track-number">5</div>
                     <h3 class="text-xl font-bold text-primary-dark mb-2">Sociocultural, Linguistic, Literary and Ethical
                         Dimensions of Sustainability</h3>
@@ -634,7 +689,7 @@
                     <div class="subtracks-list">
                         <h4 class="text-base font-semibold text-gray-700 mb-2">Topics:</h4>
                         <ul class="text-sm text-gray-600 space-y-1 pl-5">
-                            <li>Ethics of Artificial Intelligence and Technology</li>
+                            <!-- <li>Ethics of Artificial Intelligence and Technology</li> -->
                             <li>Philosophical Approaches to Ecological Challenges</li>
                             <li>Sustainable Business Practices and Corporate Social Responsibility</li>
                             <li>Behavioral Economics of Environmental Decisions</li>
@@ -642,34 +697,34 @@
                             <li>Media Influence on Environmental Policy</li>
                             <li>Cultural Perspectives on Environmental Conservation</li>
                             <li>Public Health Ethics and Policies for Sustainable Developement</li>
-                            <li>Ethics in Biomedical and Biotechnology Research</li>
+                            <!-- <li>Ethics in Biomedical and Biotechnology Research</li> -->
                             <li>Indigenous Knowledge Systems and Sustainability</li>
-                            <li>Sustainable Urban Planning and Community Engagement</li>
+                            <!-- <li>Sustainable Urban Planning and Community Engagement</li> -->
                             <li>Social Entrepreneurship and Innovation for Sustainable Development</li>
                             <li>Education for Promoting Sustainable Development</li>
                             <li>Impact of Climate Change on Vulnerable Populations</li>
                             <li>Economic Policies for Sustainable Development</li>
-                            <li>Ethics of Data Privacy and Security</li>
+                            <!-- <li>Ethics of Data Privacy and Security</li> -->
                             <li>Legal Frameworks Governing Environmental Protection</li>
                             <li>Consumer Behavior and Sustainability</li>
-                            <li>Decision Making and Behavioural Practices: Role of Emotion, Cognition and Behaviour for
+                            <li>Decision Making and Behavioural Practices: Role of Emotion snd Cognition for
                                 Sustainable Development</li>
                             <li>Neurocognitive Perspectives and Models for Achieving Sustainable Developmental Goals
                             </li>
-                            <li>Gender Issues in Science and Technology</li>
+                            <!-- <li>Gender Issues in Science and Technology</li> -->
                             <li>Role of Media, Film, Art and Architecture in Sustainable Development</li>
-                            <li>Human Rights and AI Technology Development</li>
-                            <li>Ethical Dilemmas in Resource Allocation</li>
-                            <li>Ethical Considerations in Genetic Engineering</li>
-                            <li>Philosophical and Ethical Dimensions of Climate Engineering</li>
-                            <li>Sustainable Management of Resources</li>
+                            <!-- <li>Human Rights and AI Technology Development</li> -->
+                            <!-- <li>Ethical Dilemmas in Resource Allocation</li> -->
+                            <!-- <li>Ethical Considerations in Genetic Engineering</li> -->
+                            <!-- <li>Philosophical and Ethical Dimensions of Climate Engineering</li> -->
+                            <!-- <li>Sustainable Management of Resources</li> -->
                             <li>Sociocultural and linguistic Sustainability</li>
                             <li>Social Change and Mobility for Sustainable Development</li>
-                            <li>Values, Belief and Faith: Fundamental Dimensions of Sustainable Development</li>
-                            <li>Literary Health Humanities and Sustainable Development</li>
-                            <li>Ecocriticism and Ecofeminism for Sustainable Development</li>
-                            <li>Social Justice and Access to Technologies</li>
-                            <li>Gender Equitable and Sustainable Development and the Role of NGOs</li>
+                            <li>Values, Belief and Faith: Fundamental Dimensions of Development</li>
+                            <!-- <li>Literary Health Humanities and Sustainable Development</li> -->
+                            <li>Ecocriticism and Ecofeminism for Development</li>
+                            <!-- <li>Social Justice and Access to Technologies</li> -->
+                            <li>Gender Equitable and the Role of NGOs</li>
                         </ul>
                     </div>
                 </div>
@@ -727,22 +782,20 @@
     <!-- Submission Guidelines Section -->
     <section id="submission-guidline">
         <div class="text-center mb-12">
-            <h2 class="section-title text-3xl font-bold text-primary mb-6" data-aos="fade-up">Camera Ready Copy
-                Submission Guidelines</h2>
+            <h2 class="section-title text-3xl font-bold text-primary mb-6" data-aos="fade-up">ManuScript Submission
+                Guidelines</h2>
             <div class="section-divider w-16 h-1 bg-secondary mx-auto"></div>
         </div>
         <div class="container mx-auto px-4">
-            <h4 class="text-xl font-semibold text-secondary mb-4">How to submit final Camera Ready Copy (CRC)</h4>
+            <h4 class="text-xl font-semibold text-secondary mb-4">How to submit the ManuScript</h4>
             <ul class="list-disc list-inside  mb-6">
-                <li>Login to your RSC2025 easychair account ➤ Submission ➤ Information ➤ Update File (Right Corner)
-                </li>
-                <li>Also email camera ready copy (CRC) to dean_rnc@nitrr.ac.in with subject line "Final CRC PAPER_ID"
+                <li>Login to your RSC2025 MicroSoft CMT Account ➤ Submission ➤ Information ➤ Update File (Right Corner)
                 </li>
             </ul>
-            <h4 class="text-xl font-semibold text-secondary mb-4">Guidelines for Preparing Camera Ready Copy (CRC)</h4>
+            <h4 class="text-xl font-semibold text-secondary mb-4">Guidelines for Preparing ManuScript</h4>
             <ul class="list-disc list-inside  mb-6">
                 <li>Original manuscript should be strictly structured in preferably up to 8-12 pages and formatted using
-                    Springer’s styles (available on RSC2025 Website)</li>
+                    Springer’s styles (available on MISP2022 Website)</li>
                 <li>Total similarity score (plagiarism %) must be less than or equal to 20%. Plagiarism % from a single
                     source must be less than or equal to 2 %.</li>
                 <li>Sentence formation must be correct and advised to use some spell checker or Grammarly software
@@ -754,28 +807,20 @@
                 <li>In the author section, all the authors must have affiliation information, corresponding authors must
                     be marked with * and Email id of all the authors must be provided.</li>
                 <li>All the equations must be written in the equation editor (in Math type / Microsoft 3.0).</li>
-                <li>Also email camera ready copy (CRC) to dean_rnc@nitrr.ac.in with subject line "Final CRC PAPER_ID"
-                </li>
             </ul>
             <h4 class="text-xl font-semibold text-secondary mb-4">After a double-blind peer review, qualifying Regular
                 Papers may be accepted as either Full Papers or Short Papers.</h4>
             <ul class="list-disc list-inside ">
-                <li>Springer will conduct quality checks on all the accepted and presented papers of the conference and
-                    only papers that pass these checks will be published in SPRINGER Lecture Notes in Electrical
-                    Engineering (LNEE) Book Series.</li>
-                <li>Amid prevailing conditions due to COVID19, it may take min 30-40 weeks to send the formal (email)
-                    confirmation from Springer that conference proceedings have been accepted or conditionally accepted
-                    for publication.</li>
-                <li>As per policy, Springer proceedings contain original research that has neither been published nor
+                <li>As per policy, RSC2025 proceedings contain original research that has neither been published nor
                     submitted for publication elsewhere. It is necessary that neither plagiarism nor self-plagiarism has
-                    taken place. It is possible that your manuscript will be run through the Springer
-                    plagiarism-checking tool, following the arrival of the files at Springer.</li>
+                    taken place. It is possible that your manuscript will be run through the plagiarism-checking tool,
+                    following the arrival of the files at Conference.</li>
                 <li>It must be noted that in case of plagiarism or non-implementation of reviewers comments in CRC, your
                     paper may NOT be included in proceedings. (This decision is to be taken by the publisher. It will be
                     final and binding)</li>
-                <li>For detailed instructions for author of conference proceedings, kindly visit the following link: <a
-                        href="https://www.springer.com/us/authors-editors/conference-proceedings"
-                        class="text-secondary underline">Springer Author Guidelines</a>.</li>
+                <li>For detailed instructions for author of conference proceedings, kindly visit the following link:
+                    <a href="#" class="text-secondary underline">To be updated soon...</a>.
+                </li>
                 <li>No extra fee is charged from authors for inclusion in the Book Series.</li>
                 <li>Authors will grant a non-exclusive, revocable license that allows providing services to users.</li>
             </ul>
@@ -989,6 +1034,35 @@
                             </button> -->
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="mt-16 md:mt-24">
+                <!-- Track chairs Names -->
+                <h3 class="text-xl xl:text-3xl font-bold text-black mb-6 text-center" data-aos="fade-up">Track Chairs
+                </h3>
+                <div class="section-divider"></div>
+
+                <div class="mx-auto px-4">
+                    <ul class="list-disc list-inside space-y-4 md:columns-2 lg:columns-3 mb-8 text-xl">
+                        <li class="text-primary-dark">Dr. Rohit Kumar Giri</li>
+                        <li class="text-primary-dark">Mr. Sachin Kumar Sahu</li>
+                        <li class="text-primary-dark">Dr. Mainak Basu</li>
+                        <li class="text-primary-dark">Dr. Sharda Bharti</li>
+                        <li class="text-primary-dark">Dr. Mahendra S. Gaikwad</li>
+                        <li class="text-primary-dark">Dr. Vikas Kumar Vidyarthi</li>
+                        <li class="text-primary-dark">Dr. Deepak Singh</li>
+                        <li class="text-primary-dark">Dr. Sharbani Parkyastha</li>
+                        <li class="text-primary-dark">Dr. Nilesh Kumar Thakur</li>
+                        <li class="text-primary-dark">Dr. Kanhaiya Shanker Ojha</li>
+                        <li class="text-primary-dark">Dr. Shashikanta Tarai</li>
+                        <li class="text-primary-dark">Dr. Souti Venu</li>
+                        <li class="text-primary-dark">Dr. Mayur Karwe</li>
+                        <li class="text-primary-dark">Dr. Kapil Soni</li>
+                        <li class="text-primary-dark">Dr. Sanjeev Kumar</li>
+                        <li class="text-primary-dark">Dr. Ramanath Bheekya Naik</li>
+                        <li class="text-primary-dark">Dr. Ashish Dash</li>
+                    </ul>
                 </div>
             </div>
         </div>
